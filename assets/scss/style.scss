@@ -1,187 +1,121 @@
-/*-----------------------------------------------------------------------------------
+/*! -----------------------------------------------------------------------------------
 
     Template Name: Cuba Admin
-    Template URI: themes.pixelstrap.com/Cuba
+    Template URI: http://admin.pixelstrap.com/cuba/theme
     Description: This is Admin theme
     Author: Pixelstrap
     Author URI: https://themeforest.net/user/pixelstrap
 
 -----------------------------------------------------------------------------------
-
-01. General CSS
-  02. Generic CSS
-  03. Card CSS
-  04. Loader CSS
-  05. Header CSS
-  06. Button CSS
-  07. Color CSS
-  08. GRID CSS
-  09. Error-page  CSS
-  10. Icon css
-  11. Form Builder 1 CSS
-  12. Form Builder 2 CSS
-   13. Email Application  CSS
-   14. Chat CSS
-   15. Alert CSS
-   16. Popover CSS
-   17. List CSS
-   18. Switch  CSS
-   19. Mega option CSS
-   20. Touchspin  CSS
-    21. Select 2 CSS
-	22. User profile css
-	23. Progress CSS
-	24. According CSS
-	25. Authentication CSS
-	26. Form CSS
-	27. Coming Soon CSS
-	28. Radio CSS
-	29. Form Input CSS
-	30. Data-table CSS
-	 31. JS datagrid CSS
-	 32. Page CSS
-	 33. Ecommerce  CSS
-	 34. Pricing CSS
-	 35. Form builder css
-	 36. NAV CSS
-	 37. Dropdown CSS
-	 38. Landing CSS
-	 39. Table  CSS
-	 40. Alertbox-call-out CSS
-	  41. Chart CSS
-	  42. Timeline CSS
-	  43. Timeline 2 CSS
-	  44. Tabs CSS
-	  45. Gallery CSS
-	  46. Blog CSS
-	  47. Footer CSS
-	  48. Form Wizard
-	  49. Badge CSS
-	  50. Tree CSS
-	   51. Search CSS
-	   52. Datepicker CSS
-	   53. Dashboard CSS
-	   54. Tour  CSS
-	   55. theme layout CSS
-	   56. Ribbon CSS
-	   57. breadcrumb CSS
-	   58. Steps  CSS
-	   59. Customizer CSS
-	   60. RTL CSS
-	 	61. base_inputs CSS
-	 	62. Responsive css
-	 	63. Box-layout css
-	 	64. Button Builder css
-	 	65. Button Builder color picker CSS
-	 	66. FullCalendar CSS
-	 	67. Dashboard 2
-	 	68. Dashboard 3
-	 	70. Document css
-	 	 71. Faq CSS
-	 	 72. Job CSS
-	 	 73. knowledgebase CSS
-	 	 74. internationalization CSS
-	 	 75. Learning CSS
-	 	 76. Order History css
-	 	 77. Print CSS
-	 	 78. Sidebar CSS
-	 	 79. social app
-	 	 80. avatars
-	 	  81. Bookmark
-     	  82. cart
-	 	  83. wishlist
-	 	  84. checkout
-	 	  85. bookmark app
-	 	  86. contacts
-	 	  87. task
  */
+// *** utils ***
+@import "utils/variables";
 
-@import "theme/variables";
-@import "theme/general";
-@import "theme/generic";
-@import "theme/card";
-@import "theme/loader";
-@import "theme/header";
-@import "theme/sidebar";
-@import "theme/buttons";
-@import "theme/color";
-@import "theme/grid";
-@import "theme/errorpage";
-@import "theme/icons";
-@import "theme/form-builder";
-@import "theme/form_builder-2";
-@import "theme/email-application";
-@import "theme/chat";
-@import "theme/alert";
-@import "theme/popover";
-@import "theme/list";
-@import "theme/switch";
-@import "theme/megaoption";
-@import "theme/touchspin";
-@import "theme/select2";
-@import "theme/user-profile";
-@import "theme/progress";
-@import "theme/according";
-@import "theme/login";
-@import "theme/forms";
-@import "theme/comingsoon";
-@import "theme/radio";
-@import "theme/form-input";
-@import "theme/datatable";
-@import "theme/jsgrid";
-@import "theme/page";
-@import "theme/ecommerce";
-@import "theme/pricing";
-@import "theme/builders";
-@import "theme/navs";
-@import "theme/dropdown";
-@import "theme/landing";
-@import "theme/table";
-@import "theme/chart";
-@import "theme/timeline-v";
-@import "theme/timeliny";
-@import "theme/tab";
-@import "theme/gallery";
-@import "theme/blog";
-@import "theme/footer";
-@import "theme/form-wizard";
-@import "theme/badge";
-@import "theme/tree";
-@import "theme/search";
-@import "theme/datepicker";
-@import "theme/tour";
-@import "theme/custom-theme-options";
-@import "theme/ribbon";
-@import "theme/breadcrumb";
-@import "theme/steps";
-@import "theme/theme-customizer";
-@import "theme/faq";
-@import "theme/knowledgebase";
-@import "theme/document";
-@import "theme/job-search";
-@import "theme/learning";
-@import "theme/order-history";
-@import "theme/button-builder";
-@import "theme/internationalization";
-@import "theme/social-app";
-@import "theme/avatars";
-@import "theme/bookmark";
+:root {
+    --theme-deafult: #7366ff;
+    --theme-secondary: #f73164;
+}
 
-@import "theme/file";
-@import "theme/projectlist";
-@import "theme/jkanban";
-@import "theme/kanban";
-@import "theme/typeahead-search";
-@import "theme/language";
-@import "theme/psanimated";
+// *** base ***
+@import "base/reset";
+@import "base/typography";
 
-@import "theme/cart";
-@import "theme/wishlist";
-@import "theme/checkout";
-@import "theme/bookmark-app";
-@import "theme/contacts";
-@import "theme/task";
-@import "theme/dashboard_default";
-@import "theme/dashboard_2";
-@import "theme/box-layout";
-@import "theme/rtl";
+
+//  *** components ***
+@import "components/according.scss";
+@import "components/alert.scss";
+@import "components/avatars.scss";
+@import "components/badge.scss";
+@import "components/bookmark.scss";
+@import "components/breadcrumb.scss";
+@import "components/builders.scss";
+
+@import "components/buttons.scss";
+
+@import "components/card.scss";
+@import "components/color.scss";
+@import "components/datatable.scss";
+@import "components/datepicker.scss";
+@import "components/dropdown.scss";
+@import "components/form-builder.scss";
+@import "components/form-input.scss";
+@import "components/form-wizard";
+@import "components/forms.scss";
+@import "components/form_builder-2.scss";
+@import "components/icons.scss";
+@import "components/list.scss";
+@import "components/loader.scss";
+@import "components/popover.scss";
+@import "components/print.scss";
+@import "components/radio.scss";
+@import "components/ribbon.scss";
+@import "components/switch.scss";
+@import "components/tab.scss";
+@import "components/table.scss";
+@import "components/touchspin.scss";
+@import "components/tour.scss";
+@import "components/tree.scss";
+@import "components/typeahead-search.scss";
+@import "components/scrollbar";
+
+
+
+//	*** pages ***
+
+@import "pages/blog.scss";
+@import "pages/bookmark-app.scss";
+@import "pages/cart.scss";
+@import "pages/chart.scss";
+@import "pages/chat.scss";
+@import "pages/checkout.scss";
+@import "pages/comingsoon.scss";
+@import "pages/contacts.scss";
+@import "pages/dashboard_2.scss";
+@import "pages/dashboard_default.scss";
+@import "pages/ecommerce.scss";
+@import "pages/email-application.scss";
+@import "pages/errorpage.scss";
+@import "pages/faq.scss";
+@import "pages/file.scss";
+@import "pages/gallery.scss";
+@import "pages/internationalization.scss";
+@import "pages/job-search.scss";
+@import "pages/jsgrid.scss";
+@import "pages/kanban.scss";
+@import "pages/knowledgebase.scss";
+@import "pages/landing.scss";
+@import "pages/language.scss";
+@import "pages/learning.scss";
+@import "pages/login.scss";
+@import "pages/megaoption.scss";
+@import "pages/order-history.scss";
+@import "pages/page.scss";
+@import "pages/pricing.scss";
+@import "pages/progress.scss";
+@import "pages/projectlist.scss";
+@import "pages/social-app.scss";
+@import "pages/task.scss";
+@import "pages/timeline-v.scss";
+@import "pages/timeliny.scss";
+@import "pages/user-profile.scss";
+@import "pages/wishlist.scss";
+
+
+/* ---------------------
+	*** themes ***
+-----------------------*/
+@import "themes/dark.scss";
+@import "themes/dark-sidebar.scss";
+@import "themes/theme-customizer.scss";
+
+// *** layout *** 
+
+@import "layout/footer.scss";
+@import "layout/grid.scss";
+@import "layout/header.scss";
+@import "layout/navs.scss";
+@import "layout/search.scss";
+@import "layout/select2.scss";
+@import "layout/sidebar.scss";
+@import "layout/rtl.scss";
+@import "layout/box-layout.scss";
