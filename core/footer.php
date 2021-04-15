@@ -30,6 +30,12 @@
     <script src="../assets/js/typeahead-search/handlebars.js"></script>
     <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
     <script src="../assets/js/tooltip-init.js"></script>
+    <!-- FORM -->
+    <!-- <script src="../assets/js/form-validation-custom.js"></script> -->
+    <script src="../assets/js/dropzone/dropzone.js"></script>
+    <script src="../assets/js/dropzone/dropzone-script.js"></script>
+    <script src="../assets/js/form-wizard/form-wizard-three.js"></script>
+    <script src="../assets/js/form-wizard/jquery.backstretch.min.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>

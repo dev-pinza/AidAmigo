@@ -35,7 +35,7 @@ include('nav.php');
                 </ul>
             </div>
             <div class="col-md-6">                    
-                <div class="form-group mb-0 me-0"></div><a class="btn btn-primary" href="request-fund.php"> <i data-feather="plus-square"> </i>Request New Fund</a>
+                <div class="form-group mb-0 me-0"></div><a class="btn btn-primary" href="request-fund.php"> <i data-feather="plus-square"> </i>Request New FundRaise</a>
             </div>
             </div>
         </div>
