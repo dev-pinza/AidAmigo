@@ -1,0 +1,12 @@
+INSIDE CORE FOLDER
+- Here is the format to start new file
+
+<?php
+$web_title = "Name of Page";
+include('header.php');
+include('nav.php');
+?>
+The Body Goes here
+<?php
+include('footer.php');
+?>
