@@ -98,7 +98,7 @@ include('nav.php');
                         </div>
                       </fieldset>
                       <fieldset>
-                        <div class="mb-2">
+                        <!-- <div class="mb-2"> -->
                         <div class="mb-2">
                         <label class="form-label" for="validationTextarea">FundRaise As</label>
                           <select class="form-control" name="f1-email" required="">
@@ -106,18 +106,22 @@ include('nav.php');
                               <option value="Team">Global/Team</option>
                           </select>
                         </div>
-                        </div>
+                        <!-- </div> -->
                         <div class="mb-2">
                         <label>Upload Main Image</label>
-                            <form class="dropzone" id="singleFileUpload" action="/upload.php">
-                              <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
-                                <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                              </div>
-                            </form>
+                        <!-- image upload -->
+                        <div class="form-group" x-data="{ fileName: '' }">
+                          <div class="input-group shadow">
+                            <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
+                            <input type="file" x-ref="file" @change="fileName = $refs.file.files[0].name" name="img[]" class="d-none">
+                            <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
+                            <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button>
+                          </div>
+                        </div>
                         </div>
                         <div class="f1-buttons">
                           <button class="btn btn-primary btn-previous" type="button">Previous</button>
-                          <button class="btn btn-primary btn-submit" type="submit">Submit</button>
+                          <input class="btn btn-primary btn-submit" type="submit" value="Submit">
                         </div>
                       </fieldset>
                     </form>

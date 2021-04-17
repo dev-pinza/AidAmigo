@@ -18,7 +18,7 @@
                   </li>
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="index.php"><i data-feather="activity"></i><span>Dashboard</span></a></li>
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="collect-fund.php"><i class="icofont icofont-money"></i><span>Collect Fund</span></a></li>
-                  <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="bank-account.php"><i class="icofont icofont-bank-alt"></i><span>Bank Account</span></a></li>
+                  <!-- <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="bank-account.php"><i class="icofont icofont-bank-alt"></i><span>Bank Account</span></a></li> -->
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="settings.php"><i class="icofont icofont-ui-settings"></i><span>Settings</span></a></li>
                 </ul>
               </div>

@@ -81,6 +81,14 @@ include('nav.php');
                             <div class="progress-bar-animated bg-primary progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         </div>
+                        <!-- Action buttons -->
+                        <div class="customers mt-4">
+                            <center>
+                        <button class="btn btn-pill btn-success btn-air-success" type="button" title="Withdraw the FundRaised">Collect Fund</button>
+                        <button class="btn btn-pill btn-warning btn-air-warning" type="button" title="You only get to Edit Once! ">Edit Once</button>
+                        <button class="btn btn-pill btn-light btn-air-light" type="button" title="Share">Share Link</button>
+                        </center>
+                        </div>
                     </div>
                     </div>
                     <div class="col-xxl-4 col-lg-6">
@@ -117,6 +125,14 @@ include('nav.php');
                         <div class="progress" style="height: 5px">
                             <div class="progress-bar-animated bg-success" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
+                        </div>
+                        <!-- Action button -->
+                        <div class="customers mt-4">
+                            <center>
+                        <button class="btn btn-pill btn-success btn-air-success" type="button" title="Withdraw the FundRaised">Collect Fund</button>
+                        <button class="btn btn-pill btn-warning btn-air-warning" type="button" title="You only get to Edit Once! ">Edit Once</button>
+                        <button class="btn btn-pill btn-light btn-air-light" type="button" title="Share">Share Link</button>
+                        </center>
                         </div>
                     </div>
                     </div>

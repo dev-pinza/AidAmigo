@@ -32,8 +32,11 @@
     <script src="../assets/js/tooltip-init.js"></script>
     <!-- FORM -->
     <!-- <script src="../assets/js/form-validation-custom.js"></script> -->
-    <script src="../assets/js/dropzone/dropzone.js"></script>
-    <script src="../assets/js/dropzone/dropzone-script.js"></script>
+    <script src="../assets/js/datepicker/date-picker/datepicker.js"></script>
+    <script src="../assets/js/datepicker/date-picker/datepicker.en.js"></script>
+    <script src="../assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <!-- <script src="../assets/js/dropzone/dropzone.js"></script>
+    <script src="../assets/js/dropzone/dropzone-script.js"></script> -->
     <script src="../assets/js/form-wizard/form-wizard-three.js"></script>
     <script src="../assets/js/form-wizard/jquery.backstretch.min.js"></script>
     <!-- Plugins JS Ends-->
