@@ -220,6 +220,8 @@
     });
 
     function onFinishCallback() {
-        $('#wizard').smartWizard('showMessage', 'Congratulation ! All step Done.');
+        $('#wizard').smartWizard('showMessage', 'Congratulation ! Registration Successful');
+        // Here Load upload.php function.
+        $("#register_submit").submit();
     }
 })(jQuery);
