@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Grow Fund is an African for-profit crowdfunding platform that allows people to raise money for events ranging from life events such as celebrations and graduations to challenging circumstances like accidents and illnesses.">
     <meta name="keywords" content="Grow Fund, African, Crowdfunding, Investment, Money, People, Celebration, Illnesses, Accident, Education, Payment, Graduation">
-    <meta name="author" content="pixelstrap">
+    <meta name="author" content="pinzastudio">
     <link rel="icon" href="assets/images/logo/growfund.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/logo/growfund.png" type="image/x-icon">
     <title>GrowFund - Investment & Crowd Funding</title>
@@ -411,3 +411,21 @@
     </div>
   </body>
 </html>
+
+<?php
+if (isset($_GET["return_message"])) {
+  if ($_GET["return_message"] == "wrongpass") {
+    ?>
+    <script>
+       $('#wizard').smartWizard('showMessage', 'Password Does not Match');
+    </script>
+    <?php
+  } else {
+    ?>
+    <script>
+       $('#wizard').smartWizard('showMessage', 'No DataSent');
+    </script>
+    <?php
+  }
+}
+?>
