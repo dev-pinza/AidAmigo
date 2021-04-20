@@ -25,7 +25,7 @@ if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_na
     $password = addslashes($_POST["password"]);
     $confirm_password = addslashes($_POST["confirm_password"]);
 
-    $hash_pass =password_hash($password, PASSWORD_DEFAULT);
+    $hash_pass = password_hash($password, PASSWORD_DEFAULT);
     $dob = addslashes($_POST["dob"]);
     $phone = addslashes($_POST["phone"]);
     $gender = addslashes($_POST["gender"]);
@@ -82,7 +82,7 @@ if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_na
                      <head>
                          <meta name='viewport' content='width=device-width' />
                          <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-                         <title>Application Successful</title>
+                         <title>GrowFund Nigeria</title>
                      </head>
                     
                      <body style='margin:0px; background: #f8f8f8; '>

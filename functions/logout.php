@@ -6,7 +6,7 @@
 session_start();
 $activecode = date('Y-m-d H:i:s');
 $acuser = $_SESSION["email"];
-$activeq = "UPDATE `users` SET users.last_logged ='$activecode' WHERE users.email ='$acuser'";
+$activeq = "UPDATE `users` SET users.last_logged ='$activecode', users.is_active = '0' WHERE users.email ='$acuser'";
 $rezz = mysqli_query($connection, $activeq);
 // Unset all of the session variables
 $_SESSION = array();

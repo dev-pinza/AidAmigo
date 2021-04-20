@@ -81,7 +81,7 @@
                 <div class="notification-box"><i data-feather="bell"> </i><span class="badge rounded-pill badge-secondary">4                                </span></div>
                 <ul class="notification-dropdown onhover-show-div">
                   <li><i data-feather="bell"></i>
-                    <h6 class="f-18 mb-0">Notitications</h6>
+                    <h6 class="f-18 mb-0">Notifications</h6>
                   </li>
                   <li>
                     <p><i class="fa fa-circle-o me-3 font-primary"> </i>NGN 200,000.00 Fund Completed<span class="pull-right">10 min.</span></p>

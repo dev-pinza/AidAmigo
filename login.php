@@ -1,3 +1,12 @@
+<?php
+// check if server have a POST
+// import database
+// input password checking code
+// check if email is active
+// SET sessions here
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Grow Fund is an African for-profit crowdfunding platform that allows people to raise money for events ranging from life events such as celebrations and graduations to challenging circumstances like accidents and illnesses.">
     <meta name="keywords" content="Grow Fund, African, Crowdfunding, Investment, Money, People, Celebration, Illnesses, Accident, Education, Payment, Graduation">
-    <meta name="author" content="pixelstrap">
+    <meta name="author" content="pinzastudio">
     <link rel="icon" href="assets/images/logo/growfund.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/logo/growfund.png" type="image/x-icon">
     <title>GrowFund - Investment & CrowdFunding</title>
@@ -49,17 +58,17 @@
                   <!-- <a class="logo text-start" href="index.html"><img class="img-fluid for-light" src="assets/images/logo/growfund.png" alt="looginpage" width="200px" height="200px"><img class="img-fluid for-dark" src="assets/images/logo/growfund.png" alt="looginpage" width="200px" height="200px"></a> -->
                 </div>
               <div class="login-main"> 
-                <form class="theme-form needs-validation" novalidate="">
+                <form class="theme-form needs-validation" novalidate="" method="POST">
                   <h4>Sign in to GrowFund</h4>
                   <p>Enter your email & password to login</p>
                   <div class="form-group">
                     <label class="col-form-label">Email Address</label>
-                    <input class="form-control" type="email" required="" placeholder="user@example.com">
+                    <input class="form-control" type="email" name="email" required="" placeholder="user@example.com">
                     <div class="invalid-tooltip">Please enter proper email.</div>
                   </div>
                   <div class="form-group">
                     <label class="col-form-label">Password</label>
-                    <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                    <input class="form-control" type="password" name="password" required="" placeholder="*********">
                     <div class="invalid-tooltip">Please enter password.</div>
                     <div class="show-hide"><span class="show">                         </span></div>
                   </div>
