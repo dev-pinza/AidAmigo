@@ -1,6 +1,6 @@
 <?php
   // get connections for all pages
-  include("db/connect.php");
+  include("../db/connect.php");
 
 // Initialize the session
 session_start();
@@ -15,7 +15,7 @@ $_SESSION = array();
 session_destroy();
  
 // Redirect to login page
-header("location: ../login.php");
+header("location: ../../login.php");
 
 exit;
 ?>

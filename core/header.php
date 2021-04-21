@@ -101,7 +101,7 @@
                 </div>
                 <ul class="profile-dropdown onhover-show-div">
                   <li><a href="settings.php"><i data-feather="settings"></i><span>Settings</span></a></li>
-                  <li><a href="#"><i data-feather="log-out"> </i><span>Log out</span></a></li>
+                  <li><a href="../functions/auth/LogOut.php"><i data-feather="log-out"> </i><span>Log out</span></a></li>
                 </ul>
               </li>
             </ul>
