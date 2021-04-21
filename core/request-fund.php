@@ -22,6 +22,16 @@ include('nav.php');
           </div>
           <!-- Container-fluid starts-->
           <div class="container-fluid">
+            <?php
+            if (isset($_GET["error"]) && $_GET["error"] != "") {
+              ?>
+              <div class="alert alert-danger inverse alert-dismissible fade show" role="alert"><i class="icon-alert txt-light"></i>
+                  <p style="color: white;"><?php echo $_GET["error"]; ?></p>
+                  <button class="btn-close txt-light" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <?php
+            }
+            ?>
             <div class="row">
               <div class="col-sm-12">
                 <div class="card">
@@ -29,7 +39,7 @@ include('nav.php');
                     <h5>FundRaise Campaign</h5>
                   </div>
                   <div class="card-body">
-                    <form class="f1" method="post">
+                    <form class="f1" method="POST" action="../functions/fund/RequestFund.php" enctype="multipart/form-data">
                       <div class="f1-steps">
                         <div class="f1-progress">
                           <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3"></div>
@@ -112,12 +122,12 @@ include('nav.php');
                         </div>
                         <!-- </div> -->
                         <div class="mb-2">
-                        <label>Upload Main Image</label>
+                        <label>Upload Main Image - < 3MB</label>
                         <!-- image upload -->
                         <div class="form-group" x-data="{ fileName: '' }">
                           <div class="input-group shadow">
                             <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
-                            <input type="file" name="main_image" accept="image/png,image/jpg,image/jpeg" class="form-control">
+                            <input type="file" name="image" onchange="ValidateSize(this)" accept="image/png,image/jpg,image/jpeg" class="form-control" required>
                             <!-- <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
                             <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button> -->
                           </div>
@@ -125,7 +135,7 @@ include('nav.php');
                         </div>
                         <div class="f1-buttons">
                           <button class="btn btn-primary btn-previous" type="button">Previous</button>
-                          <input class="btn btn-primary btn-submit" type="submit" value="Submit">
+                          <button disabled class="btn btn-primary btn-submit" id="action_button" type="submit">Submit</button>
                         </div>
                       </fieldset>
                     </form>
@@ -139,3 +149,17 @@ include('nav.php');
 <?php
 include('footer.php');
 ?>
+<!-- JS FUNCTIONS -->
+<script>
+function ValidateSize(file) {
+        const FileSize = file.files[0].size / 1024 / 1024; // in MiB
+
+        if (FileSize > 2) {
+            alert('Image size shouldnt exceed 2 MiB');
+           // $(file).val(''); //for clearing with Jquery
+          $('#action_button').prop('disabled', true);
+        } else {
+          $('#action_button').removeAttr("disabled");
+        }
+    }
+</script>

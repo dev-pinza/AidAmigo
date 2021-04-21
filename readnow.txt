@@ -10,3 +10,25 @@ The Body Goes here
 <?php
 include('footer.php');
 ?>
+
+INSIDE CORE FOLDER
+
+WE USE THIS NOTIFICATION RETURN MESSAGE format
+
+success
+<div class="alert alert-success inverse alert-dismissible fade show" role="alert"><i class="icon-thumb-up alert-center"></i>
+    <p><b> Well done! </b>You successfully read this important alert message.</p>
+    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+error
+
+<div class="alert alert-light inverse alert-dismissible fade show" role="alert"><i class="icon-alert txt-dark"></i>
+    <p>You can check in on some of those fields below.</p>
+    <button class="btn-close txt-light" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="alert alert-dark inverse alert-dismissible fade show" role="alert"><i class="icon-info-alt"></i>
+    <p> You can check in on some of those fields below.</p>
+    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

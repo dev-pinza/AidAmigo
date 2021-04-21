@@ -58,6 +58,8 @@ if ($_SESSION["loggedin"] != true) {
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <!-- AJAX  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body onload="startTime()">
   <div class="loader-wrapper">
