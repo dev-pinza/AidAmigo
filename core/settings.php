@@ -24,6 +24,7 @@ include('nav.php');
           <!-- Container-fluid starts                    -->
           <div class="container-fluid">
             <div class="row">
+              <!-- col-sm-3 col-md-6 -->
               <div class="col-xl-6 xl-100 col-lg-12 box-col-12">
                 <div class="card">
                   <div class="card-header">
@@ -38,38 +39,46 @@ include('nav.php');
                       </ul>
                       <div class="tab-content" id="top-tabContentdanger">
                         <div class="tab-pane fade active show" id="top-homedanger" role="tabpanel" aria-labelledby="top-home-tab">
-                            <div class="card">
-                                <div class="card-header py-4">
-                                    <h5>Profile Update </h5>
-                                </div>
-                                
-                                <div class="card-body">
-                                    <div class="row">
-                                    <div class="col-md-12">
-                                        <form class="theme-form mega-form">
-                                        <div class="mb-3">
-                                        <input class="form-control" type="text" readonly placeholder="Oluwaseun">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input class="form-control" type="text" readonly placeholder="Email">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input class="form-control" type="text" readonly placeholder="+2348162399614">
-                                        </div>
-                                        <div class="mb-3">
-                                        <input class="form-control" type="text" readonly placeholder="Address">
-                                        </div>
-                                        <div class="mb-3">
-                                            <button type="submit" class="btn btn-pill btn-success btn-air-success">Update</button>
-                                        </div>
-                                        </form>
-                                    </div>
-                                    </div>
-                                </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card">
+                                  <div class="card-header py-4">
+                                      <h5>Profile Update </h5>
+                                  </div>
+                                  
+                                  <div class="card-body">
+                                      <div class="row">
+                                      <div class="col-md-12">
+                                          <form class="theme-form mega-form">
+                                          <div class="mb-3">
+                                          <input class="form-control" type="text" readonly placeholder="Oluwaseun">
+                                          </div>
+                                          <div class="mb-3">
+                                              <input class="form-control" type="text" readonly placeholder="Email">
+                                          </div>
+                                          <div class="mb-3">
+                                              <input class="form-control" type="text" readonly placeholder="+2348162399614">
+                                          </div>
+                                          <div class="mb-3">
+                                          <input class="form-control" type="text" readonly placeholder="Address">
+                                          </div>
+                                          <div class="mb-3">
+                                              <button type="submit" class="btn btn-pill btn-success btn-air-success">Update</button>
+                                          </div>
+                                          </form>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
                             </div>
+                          </div>
+                            
                         </div>
                         <div class="tab-pane fade" id="top-profiledanger" role="tabpanel" aria-labelledby="profile-top-tab">
-                        <div class="card">
+                          <div class="row">
+                            <div class="col-md-12">
+
+                            <div class="card">
                                 <div class="card-header py-4">
                                     <h5>Verify Identity </h5>
                                 </div>
@@ -92,6 +101,9 @@ include('nav.php');
                                     </div>
                                 </div>
                             </div>
+
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

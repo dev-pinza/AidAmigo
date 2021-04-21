@@ -186,7 +186,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <!-- <h6 class="text-muted mt-4 or">Or Sign in with</h6> -->
                   <div class="social mt-4">
                     <div class="btn-showcase">
-                        <a href="" target="_blank"> Forgot Password? </a>
+                        <a href="forget_password.php" target="_blank"> Forgot Password? </a>
                     </div>
                   </div>
                   <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="signup.php">Create Account</a></p>
