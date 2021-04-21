@@ -1,3 +1,26 @@
+<?php
+// USER DETAILS
+#session
+session_start();
+#database
+include('../functions/db/connect.php');
+
+# session entities
+$user_id = $_SESSION["id"];
+$email = $_SESSION["email"];
+$phone = $_SESSION["phone"];
+$email_confimed = $_SESSION["email_confimed"];
+$first_name = $_SESSION["first_name"];
+$middle_name = $_SESSION["middle_name"];
+$last_name = $_SESSION["last_name"];
+
+if ($email_confimed == "0") {
+  echo header("location:  ../functions/auth/LogOut.php");
+}
+if ($_SESSION["loggedin"] != true) {
+  echo header("location:  ../functions/auth/LogOut.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -78,15 +101,38 @@
               <li>                         
                   <span class="header-search"><i data-feather="search"></i></span></li>
               <li class="onhover-dropdown">
-                <div class="notification-box"><i data-feather="bell"> </i><span class="badge rounded-pill badge-secondary">4                                </span></div>
+              <!-- count notification -->
+              <?php
+              $query_notify = mysqli_query($connection, "SELECT * FROM `notification` WHERE user_id = '$user_id' AND is_read = '0'");
+              $not_sum = mysqli_num_rows($query_notify);
+              ?>
+              <!-- end count -->
+                <div class="notification-box"><i data-feather="bell"> </i><span class="badge rounded-pill badge-secondary"> <?php echo $not_sum; ?>                               </span></div>
                 <ul class="notification-dropdown onhover-show-div">
                   <li><i data-feather="bell"></i>
                     <h6 class="f-18 mb-0">Notifications</h6>
                   </li>
+                  <!-- PHP NOTIFICATION -->
+                  <?php
+                  #query notification.
+                  $query_notify = mysqli_query($connection, "SELECT * FROM `notification` WHERE user_id = '$user_id' AND is_read = '0' ORDER BY id DESC LIMIT 5");
+                  if (mysqli_num_rows($query_notify) > 0) {
+                    $gn = mysqli_fetch_array($query_notify);
+                  ?>
                   <li>
-                    <p><i class="fa fa-circle-o me-3 font-primary"> </i>NGN 200,000.00 Fund Completed<span class="pull-right">10 min.</span></p>
+                    <p><i class="fa fa-circle-o me-3 font-primary"> </i> <?php echo $gn["message"]; ?><span class="pull-right"><?php echo $gn["date"]; ?></span></p>
                   </li>
-                  <li><a class="btn btn-primary" href="#">Check all notification</a></li>
+                  <?php
+                  } else {
+                    ?>
+                    <li>
+                    <p><i class="fa fa-circle-o me-3 font-warning"> </i>Zero Notification<span class="pull-right">(*_*)</span></p>
+                  </li>
+                    <?php
+                  }
+                  ?>
+                  <!-- END PHP NOTIFICATION -->
+                  <li><a class="btn btn-primary" href="notification.php">Check all notification</a></li>
                 </ul>
               </li>
               <li>
@@ -95,7 +141,7 @@
               <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
               <li class="profile-nav onhover-dropdown p-0 me-0">
                 <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.jpg" alt="">
-                  <div class="media-body"><span>Ajiboye Oluwaseun</span>
+                  <div class="media-body"><span><?php echo $first_name.' '.$last_name ?></span>
                     <p class="mb-0 font-roboto"><?php echo date('Y-m-d');?> <i class="middle fa fa-angle-down"></i></p>
                   </div>
                 </div>

@@ -51,13 +51,17 @@ include('nav.php');
                         <div class="mb-2">
                         <label class="form-label" for="validationCustomUsername">Goal Amount</label>
                           <div class="input-group"><span class="input-group-text" id="inputGroupPrepend">$</span>
-                            <input class="form-control" id="validationCustomUsername" type="number" placeholder="30000" aria-describedby="inputGroupPrepend" required="">
+                            <input class="form-control" id="validationCustomUsername" type="number" name="goal_amount" placeholder="30000" aria-describedby="inputGroupPrepend" required="">
                             <div class="invalid-feedback">input a goal amount.</div>
                           </div>
                         </div>
                         <div class="mb-2">
                           <label for="f1-last-name">Campaign Title</label>
-                          <input class="f1-last-name form-control" id="f1-last-name" type="text" name="f1-last-name" placeholder="Help Josh Smile Again" required="">
+                          <input class="f1-last-name form-control" id="f1-last-name" type="text" name="campaign_title" placeholder="Help Josh Smile Again" required="">
+                        </div>
+                        <div class="mb-2">
+                          <label for="f1-last-name">Due Date</label>
+                          <input class="f1-last-name form-control" id="f1-last-name" type="date" name="due_date" required="">
                         </div>
                         <div class="f1-buttons">
                           <button class="btn btn-primary btn-next" type="button">Next</button>
@@ -66,7 +70,7 @@ include('nav.php');
                       <fieldset>
                         <div class="mb-2">
                         <label class="form-label" for="validationTextarea">FundRaise Category</label>
-                          <select class="form-control" name="f1-email" required="">
+                          <select class="form-control" name="category" required="">
                               <option value="Medical">Medical</option>
                               <option value="Memorial">Memorial</option>
                               <option value="Emergency">Emergency</option>
@@ -89,7 +93,7 @@ include('nav.php');
                         </div>
                         <div class="mb-2">
                         <label class="form-label" for="validationTextarea">Your Story</label>
-                        <textarea class="form-control "  placeholder="Short Story" required=""></textarea>
+                        <textarea class="form-control" name="story_body"  placeholder="Short Story" required=""></textarea>
                         <!-- <div class="invalid-feedback">Please enter a message in the textarea.</div> -->
                         </div>
                         <div class="f1-buttons">
@@ -101,7 +105,7 @@ include('nav.php');
                         <!-- <div class="mb-2"> -->
                         <div class="mb-2">
                         <label class="form-label" for="validationTextarea">FundRaise As</label>
-                          <select class="form-control" name="f1-email" required="">
+                          <select class="form-control" name="user_type" required="">
                               <option value="Individal">Individual</option>
                               <option value="Team">Global/Team</option>
                           </select>
@@ -113,9 +117,9 @@ include('nav.php');
                         <div class="form-group" x-data="{ fileName: '' }">
                           <div class="input-group shadow">
                             <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
-                            <input type="file" x-ref="file" @change="fileName = $refs.file.files[0].name" name="img[]" class="d-none">
-                            <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
-                            <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button>
+                            <input type="file" name="main_image" accept="image/png,image/jpg,image/jpeg" class="form-control">
+                            <!-- <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
+                            <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button> -->
                           </div>
                         </div>
                         </div>
