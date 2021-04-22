@@ -60,7 +60,7 @@ if (isset($_POST["goal_amount"]) && isset($_POST["due_date"]) && isset($_POST["s
             if (mysqli_num_rows($query_check_fund) <= 0 ) {
 
                 #upload fund 
-                $query_upload_fund = mysqli_query($connection, "INSERT INTO `fund_raise` (`user_id`, `currency`, `goal_amount`, `amount_raised`, `total_contributed`, `public_link`, `due_date`, `created_date`, `campaign_title`, `category`, `story_body`, `user_type`, `image_base64`, `is_active`, `is_withdrawn`) VALUES ('{$user_id}', 'USD', '{$goal_amount}', '0.00', '0', '{$public_link}', '{$due_date}', '{$created_date}', '{$campaign_title}', '{$category}', '{$story_body}', '{$user_type}', '{$base64}', '1', '0')");
+                $query_upload_fund = mysqli_query($connection, "INSERT INTO `fund_raise` (`user_id`, `currency`, `goal_amount`, `amount_raised`, `total_contributed`, `public_link`, `due_date`, `created_date`, `campaign_title`, `category`, `story_body`, `user_type`, `image_base64`, `is_active`, `is_withdrawn`) VALUES ('{$user_id}', 'NGN', '{$goal_amount}', '0.00', '0', '{$public_link}', '{$due_date}', '{$created_date}', '{$campaign_title}', '{$category}', '{$story_body}', '{$user_type}', '{$base64}', '1', '0')");
 
                 if ($query_upload_fund) {
                     echo header("Location: ../../core/index.php?sucess=1");

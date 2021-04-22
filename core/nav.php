@@ -1,6 +1,5 @@
 <!-- Page Body Start-->
 <div class="page-body-wrapper default-menu default-menu">
-        
         <!-- Page Sidebar Start-->
         <div class="sidebar-wrapper">
           <div>

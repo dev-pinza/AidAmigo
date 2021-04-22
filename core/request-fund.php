@@ -60,7 +60,7 @@ include('nav.php');
                       <fieldset>
                         <div class="mb-2">
                         <label class="form-label" for="validationCustomUsername">Goal Amount</label>
-                          <div class="input-group"><span class="input-group-text" id="inputGroupPrepend">$</span>
+                          <div class="input-group"><span class="input-group-text" id="inputGroupPrepend">NGN</span>
                             <input class="form-control" id="validationCustomUsername" type="number" name="goal_amount" placeholder="30000" aria-describedby="inputGroupPrepend" required="">
                             <div class="invalid-feedback">input a goal amount.</div>
                           </div>
