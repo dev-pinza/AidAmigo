@@ -43,28 +43,50 @@ include('nav.php');
                             <div class="col-md-12">
                               <div class="card">
                                   <div class="card-header py-4">
-                                      <h5>Profile Update </h5>
+                                      <h5>Profile Update <b style="color: brown;">coming soon!</b></h5>
                                   </div>
-                                  
+                                  <?php
+                                  $query_users_profile = mysqli_query($connection, "SELECT * FROM `users` WHERE id = '$user_id'");
+
+                                  $qup = mysqli_fetch_array($query_users_profile);
+
+                                  ?>
                                   <div class="card-body">
                                       <div class="row">
                                       <div class="col-md-12">
                                           <form class="theme-form mega-form">
                                           <div class="mb-3">
-                                          <input class="form-control" type="text" readonly placeholder="Oluwaseun">
+                                          <input class="form-control" type="text" readonly value="<?php echo $qup["first_name"].' '.$qup["middle_name"].' '.$qup["last_name"]; ?>">
                                           </div>
                                           <div class="mb-3">
-                                              <input class="form-control" type="text" readonly placeholder="Email">
+                                              <input class="form-control" type="text" readonly value="<?php echo $qup["email"]; ?>">
                                           </div>
                                           <div class="mb-3">
-                                              <input class="form-control" type="text" readonly placeholder="+2348162399614">
+                                              <input class="form-control" type="text" readonly value="<?php echo $qup["phone"]; ?>">
                                           </div>
                                           <div class="mb-3">
-                                          <input class="form-control" type="text" readonly placeholder="Address">
+                                          <input class="form-control" type="text" readonly value="<?php echo $qup["country"]; ?>">
                                           </div>
                                           <div class="mb-3">
-                                              <button type="submit" class="btn btn-pill btn-success btn-air-success">Update</button>
+                                          <input class="form-control" type="text" readonly value="<?php echo $qup["state"]; ?>">
                                           </div>
+                                          <div class="mb-3">
+                                          <input class="form-control" type="text" readonly value="<?php echo $qup["dob"]; ?>">
+                                          </div>
+                                          <div class="mb-3">
+                                              <button disabled type="submit" class="btn btn-pill btn-success btn-air-success">Update</button>
+                                          </div>
+                                          <?php
+                                          $query_bank_c = mysqli_query($connection, "SELECT * FROM `bank_account` WHERE user_id = '$user_id'");
+
+                                          if (mysqli_num_rows($query_bank_c) <= 0) {
+                                          ?>
+                                          <div class="mb-3">
+                                              <a href="collect-fund.php" class="btn btn-pill btn-warning btn-air-warning">Create Withdrawal Account</a>
+                                          </div>
+                                          <?php
+                                          }
+                                          ?>
                                           </form>
                                       </div>
                                       </div>
@@ -80,7 +102,7 @@ include('nav.php');
 
                             <div class="card">
                                 <div class="card-header py-4">
-                                    <h5>Verify Identity </h5>
+                                    <h5>Verify Identity <b style="color: brown;">coming soon!</b> </h5>
                                 </div>
                                 
                                 <div class="card-body">
@@ -88,13 +110,13 @@ include('nav.php');
                                     <div class="col-md-12">
                                         <form class="theme-form mega-form">
                                         <div class="mb-3">
-                                        <input class="form-control" type="text" readonly placeholder="BVN">
+                                        <input class="form-control" readonly type="text" readonly placeholder="BVN">
                                         </div>
                                         <div class="mb-3">
-                                            <input class="form-control" type="text" readonly placeholder="Phone Number">
+                                            <input class="form-control" readonly type="text" readonly placeholder="Phone Number">
                                         </div>
                                         <div class="mb-3">
-                                            <button type="submit" class="btn btn-pill btn-success btn-air-success">Verify</button>
+                                            <button disabled type="submit" class="btn btn-pill btn-success btn-air-success">Verify</button>
                                         </div>
                                         </form>
                                     </div>

@@ -60,6 +60,8 @@ if ($_SESSION["loggedin"] != true) {
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
     <!-- AJAX  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--  SWEET ALERT -->
+    <link href="../assets/libs/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
   </head>
   <body onload="startTime()">
   <div class="loader-wrapper">
@@ -100,8 +102,9 @@ if ($_SESSION["loggedin"] != true) {
           </div>
           <div class="nav-right col-8 pull-right right-header p-0">
             <ul class="nav-menus">
-              <li>                         
-                  <span class="header-search"><i data-feather="search"></i></span></li>
+              <!-- <li>                         
+                  <span class="header-search"><i data-feather="search"></i></span>
+                </li> -->
               <li class="onhover-dropdown">
               <!-- count notification -->
               <?php
@@ -141,7 +144,7 @@ if ($_SESSION["loggedin"] != true) {
                 <div class="mode"><i class="fa fa-moon-o"></i></div>
               </li>
               <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
-              <li class="profile-nav onhover-dropdown p-0 me-0">
+              <li class="onhover-dropdown p-0 me-0">
                 <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.jpg" alt="">
                   <div class="media-body"><span><?php echo $first_name.' '.$last_name ?></span>
                     <p class="mb-0 font-roboto"><?php echo date('Y-m-d');?> <i class="middle fa fa-angle-down"></i></p>
