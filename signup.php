@@ -166,6 +166,9 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                         <input class="form-control mt-1" name="address" type="text" placeholder="No 2. ..." required="required">
                         <!-- Smart Wizard Ends-->
                       </div>
+                      <div class="form-group mb-3">
+                      <button class="btn btn-success btn-block" type="submit">Submit</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -195,6 +198,12 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       <!-- <script src="assets/js/theme-customizer/customizer.js"></script> -->
       <!-- login js-->
       <!-- Plugin used-->
+      <style>
+        .wizard-4 .action-bar {
+    position: absolute;
+    bottom: 10px;
+}
+      </style>
       <script>
       (function (a) {
     a.fn.smartWizard = function (m) {
@@ -207,7 +216,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 e.addClass("content");
                 n = a("<div>Loading</div>").addClass("loader");
                 k = a("<div></div>").addClass("action-bar");
-                p = a("<div></div>").addClass("step-container login-card mb-4");
+                p = a("<div></div>").addClass("step-container login-card");
                 q = a("<a>" + c.labelNext + "</a>").attr("href", "#").addClass("btn btn-primary");
                 r = a("<a>" + c.labelPrevious + "</a>").attr("href", "#").addClass("btn btn-primary");
                 s = a("<a>" + c.labelFinish + "</a>").attr("href", "#").addClass("btn btn-primary");
