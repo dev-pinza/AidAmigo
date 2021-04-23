@@ -84,15 +84,15 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <div class="theme-form">
                       <div class="form-group mb-3">
                         <label for="name">First Name</label>
-                        <input class="form-control" id="name" name="first_name" type="text" placeholder="Sam" required="required">
+                        <input class="form-control" id="name" name="first_name" type="text" placeholder="Sam" required>
                       </div>
                       <div class="form-group mb-3">
                         <label for="lname">Middle Name</label>
-                        <input class="form-control" id="mname" name="middle_name" type="text" placeholder="John">
+                        <input class="form-control" id="mname" name="middle_name" type="text" placeholder="John" required>
                       </div>
                       <div class="form-group mb-3">
                         <label for="contact">Last Name</label>
-                        <input class="form-control" id="lname" name="last_name" type="text" placeholder="Kelly" required="required">
+                        <input class="form-control" id="lname" name="last_name" type="text" placeholder="Kelly" required>
                       </div>
                     </div>
                   </div>
@@ -106,15 +106,15 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <div class="theme-form">
                       <div class="form-group mb-3 m-t-15">
                         <label for="exampleFormControlInput1">Email address</label>
-                        <input class="form-control" name="email" id="exampleFormControlInput1" type="email" placeholder="name@example.com">
+                        <input class="form-control" name="email" id="exampleFormControlInput1" type="email" placeholder="name@example.com" required>
                       </div>
                       <div class="form-group mb-3">
                         <label for="exampleInputPassword1">Password</label>
-                        <input class="form-control" name="password" id="exampleInputPassword1" type="password" placeholder="Password">
+                        <input class="form-control" name="password" id="exampleInputPassword1" type="password" placeholder="Password" required>
                       </div>
                       <div class="form-group mb-3">
                         <label for="exampleInputPassword1">Confirm Password</label>
-                        <input class="form-control" name="confirm_password" id="exampleInputcPassword1" type="password" placeholder="Enter again">
+                        <input class="form-control" name="confirm_password" id="exampleInputcPassword1" type="password" placeholder="Enter again" required>
                       </div>
                     </div>
                   </div>
@@ -132,7 +132,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                       </div>
                       <div class="form-group mb-3">
                         <label class="control-label">Phone</label>
-                        <input class="form-control" name="phone" placeholder="8162339624" type="number" required="required">
+                        <input class="form-control" name="phone" placeholder="8162339624" type="number" required>
                       </div>
                       <div class="form-group mb-3">
                         <label class="control-label">Gender</label>

@@ -14,7 +14,7 @@ include('../db/connect.php');
 require_once "../../bat/phpmailer/PHPMailerAutoload.php";
 
 
-if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_name"])) {
+if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_name"]) && $_POST["first_name"] != "") {
 
     $first_name = addslashes($_POST["first_name"]);
     $middle_name = addslashes($_POST["middle_name"]);
