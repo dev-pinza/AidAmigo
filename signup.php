@@ -55,7 +55,11 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             <form method="POST" action="functions/auth/UserSignup.php" id="register_submit" enctype="multipart/form-data">                
               <div class="wizard-4" id="wizard">                       
                 <ul>
-                  <li><a class="logo text-start ps-0" href="index.html"><img class="img-fluid for-light" src="assets/images/logo/growfund.png" height="200px" width="200px" alt="looginpage"><img class="img-fluid for-dark" src="assets/images/logo/growfund.png" height="200px" width="200px" alt="looginpage"></a></li>
+                  <li><a class="logo text-start ps-0" href="index.php">
+                    <img class="img-fluid for-light" src="assets/images/logo/growfund.png" height="200px" width="200px" alt="looginpage">
+                    <!-- <img class="img-fluid for-dark" src="assets/images/logo/growfund.png" height="200px" width="200px" alt="looginpage"> -->
+                  </a>
+                  </li>
                   <li><a href="#step-1">
                       <h4>1</h4>
                       <h5>personal</h5><small>Add personal details</small></a></li>
@@ -203,7 +207,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 e.addClass("content");
                 n = a("<div>Loading</div>").addClass("loader");
                 k = a("<div></div>").addClass("action-bar");
-                p = a("<div></div>").addClass("step-container login-card");
+                p = a("<div></div>").addClass("step-container login-card mb-4");
                 q = a("<a>" + c.labelNext + "</a>").attr("href", "#").addClass("btn btn-primary");
                 r = a("<a>" + c.labelPrevious + "</a>").attr("href", "#").addClass("btn btn-primary");
                 s = a("<a>" + c.labelFinish + "</a>").attr("href", "#").addClass("btn btn-primary");
