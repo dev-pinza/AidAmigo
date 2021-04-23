@@ -44,6 +44,15 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     <link id="color" rel="stylesheet" href="assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT516R5N90"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-MT516R5N90')
+    </script>
   </head>
   <body>
     <!-- login page start-->

@@ -171,7 +171,7 @@ include('nav.php');
   // SWEET ALERT SUCCESS
   swal.fire({
     type: "success",
-    title: "Content Copied",
+    title: "Copy Content Below",
     text: copied_value,
     showConfirmButton: false,
     timer: 9000

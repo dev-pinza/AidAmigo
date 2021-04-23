@@ -2,16 +2,16 @@
 include('header.php');
 include("functions/db/connect.php");
 ?>
-<body class="landing-page" onload="startTime()">
+<body class="landing-page">
 <div class="loader-wrapper">
       <div class="loader-index"><span></span></div>
-      <svg>
+      <!-- <svg>
         <defs></defs>
         <filter id="goo">
           <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
           <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
         </filter>
-      </svg>
+      </svg> -->
     </div>
     <!-- page-wrapper Start-->
     <div class="page-wrapper landing-page">
@@ -33,7 +33,7 @@ include("functions/db/connect.php");
                 <button class="navbar-toggler navabr_btn-set custom_nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <div class="navbar-collapse justify-content-end collapse hidenav" id="navbarDefault">
                   <ul class="navbar-nav navbar_nav_modify" id="scroll-spy">
-                    <li class="nav-item"><a class="nav-link" href="#layout">FundRaising</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#layout">FundRaising</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="#components">Investment</a></li>
                     <li class="nav-item"><a class="nav-link" href="#applications">Donate</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
@@ -65,7 +65,7 @@ include("functions/db/connect.php");
       </div>
 
       
-      <section id="layout" class="section-space cuba-demo-section bg-Widget pb-0 bg-primary">
+      <!-- <section id="layout" class="section-space cuba-demo-section bg-Widget pb-0 bg-primary">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 wow pulse">
@@ -113,7 +113,7 @@ include("functions/db/connect.php");
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section-space cuba-demo-section email_bg">
         <div class="container">
           <div class="row">
@@ -205,7 +205,7 @@ include("functions/db/connect.php");
               <?php
               $current_date = date('Y-m-d H:i:s');
               $current_date_x = date('Y-m-d').' 00:00:00';
-              $query_get_fund = mysqli_query($connection, "SELECT * FROM `fund_raise` WHERE (due_date >= '$current_date' AND is_withdrawn = '0') AND is_active = '1' ORDER BY id DESC LIMIT 8");
+              $query_get_fund = mysqli_query($connection, "SELECT * FROM `fund_raise` WHERE (due_date >= '$current_date' AND is_withdrawn = '0' AND amount_raised > 0) AND is_active = '1' ORDER BY id DESC LIMIT 8");
 
               if (mysqli_num_rows($query_get_fund) > 0) {
                 while ($row = mysqli_fetch_array($query_get_fund)) {

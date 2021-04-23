@@ -47,6 +47,15 @@ include('../functions/db/connect.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--  SWEET ALERT -->
     <link href="../assets/libs/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT516R5N90"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-MT516R5N90')
+    </script>
   </head>
   <body onload="startTime()">
   <!-- <div class="loader-wrapper">
