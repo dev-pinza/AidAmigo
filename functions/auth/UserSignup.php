@@ -65,6 +65,7 @@ if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_na
                      // to adress and name
                      $mail->addAddress($email, $first_name);
                      // reply address
+                     $mail->SMTPSecure = 'ssl';
                      //Address to which recipient will reply
                      // progressive html images
                      $mail->addReplyTo("info@growfund.com.ng", "Reply");

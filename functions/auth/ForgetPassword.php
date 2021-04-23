@@ -34,6 +34,7 @@ if (isset($_POST["email"])) {
             $mail->From = "info@growfund.com.ng";
             $mail->FromName = "GrowFund";
             // to adress and name
+            $mail->SMTPSecure = 'ssl';
             $mail->addAddress($email, $first_name);
             // reply address
             //Address to which recipient will reply
