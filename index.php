@@ -35,7 +35,7 @@ include('header.php');
                     <li class="nav-item"><a class="nav-link" href="#layout">FundRaiser</a></li>
                     <li class="nav-item"><a class="nav-link" href="#components">Investment</a></li>
                     <li class="nav-item"><a class="nav-link" href="#applications">Global Funding</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#frameworks">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                     <li class="nav-item buy-btn"><a class="nav-link js-scroll" href="signup.php" target="_blank">Start a GrowFund</a></li>
                   </ul>
                 </div>
@@ -62,205 +62,8 @@ include('header.php');
           </div>
         </div>
       </div>
-      <section class="section-space cuba-demo-section layout" id="layout">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 wow pulse">
-              <div class="cuba-demo-content">
-                <div class="couting">
-                  <h2>12+</h2>
-                  <p>Admin unique layouts</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row demo-imgs">
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/default.jpg" alt="default">
-                <div class="hover-link">
-                  <div data-bs-toggle="tooltip" data-bs-placement="top" title="HTML"><a class="ms-2" href="index.html" target="_blank">HTML</a></div>
-                  <div data-bs-toggle="tooltip" data-bs-placement="top" title="React"><a class="ms-2" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div data-bs-toggle="tooltip" data-bs-placement="top" title="Angular"><a class="ms-2" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div data-bs-toggle="tooltip" data-bs-placement="top" title="Vue"><a class="ms-2" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div data-bs-toggle="tooltip" data-bs-placement="top" title="Laravel"><a class="ms-2" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Dubai</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/centralize.jpg" alt="centralize">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="box-layout">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">New York</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/classic-sidebar.jpg" alt="classicSidebar">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="dark-sidebar">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Paris</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/collapse.jpg" alt="collapse">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="compact-small">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Moscow</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/compact.jpg" alt="compact">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="compact-wrap">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Tokyo</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/enterprise.jpg" alt="enterprise">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="enterprice-type">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Singapore</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/further.jpg" alt="further">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="advance-type">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Barcelona</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/material.jpg" alt="material">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="material-layout">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Los Angeles</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/revolutionary.jpg" alt="revolutionary">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="color-sidebar">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Madrid</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/statistics.jpg" alt="statistics">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="material-icon">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Rome</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/trendy.jpg" alt="trendy">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="modern-layout">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">Seoul</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 wow pulse demo-content">
-              <div class="cuba-demo-img"><img class="img-fluid" src="assets/images/landing/layout-images/blank.jpg" alt="blank">
-                <div class="hover-link"><a class="html" href="javascript:void(0)" target="_blank" data-attr="default-body">Html</a>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://react.pixelstrap.com/cuba/dashboard/default" target="_blank">React</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://angular.pixelstrap.com/cuba/" target="_blank">Angular</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="https://vue.pixelstrap.com/cuba/dashboard/default" target="_blank">Vue</a></div>
-                  <div class="link-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Coming soon"><a class="ms-2 coming-soon disabled" href="http://laravel.pixelstrap.com/cuba/dashboard/index" target="_blank">Laravel</a></div>
-                </div>
-              </div>
-              <div class="title-wrapper">
-                <div class="content">
-                  <h3 class="theme-name mb-0">London</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      
       <section class="section-space cuba-demo-section bg-Widget pb-0 bg-primary">
         <div class="container">
           <div class="row">
@@ -278,9 +81,9 @@ include('header.php');
           <div class="row landing-cards">
             <div class="col-lg-8">
               <div class="row">
-                <div class="col-sm-5 col-12"><img class="img-fluid landing-card" src="assets/images/landing/cards/1.jpg" alt=""></div>
-                <div class="col-sm-4 col-7"><img class="img-fluid landing-card" src="assets/images/landing/cards/2.jpg" alt=""></div>
-                <div class="col-sm-3 col-5"><img class="img-fluid landing-card" src="assets/images/landing/cards/3.jpg" alt=""></div>
+                <div class="col-sm-5 col-12"><img class="img-fluid landing-card" src="assets/images/login/liftingothers.jpg" alt=""></div>
+                <div class="col-sm-4 col-7"><img class="img-fluid landing-card" src="assets/images/login/bulb.jpg" alt=""></div>
+                <div class="col-sm-3 col-5"><img class="img-fluid landing-card" src="assets/images/login/fund_home_2.jpg" alt=""></div>
                 <div class="col-sm-8 col-12">
                   <div class="row">
                     <div class="col-6"><img class="img-fluid landing-card" src="assets/images/landing/cards/4.jpg" alt=""></div>
@@ -319,7 +122,7 @@ include('header.php');
               </div>
             </div>
           </div>
-        </div><img class="img-fluid" src="assets/images/landing/email_section_img.jpg" alt="">
+        </div><img class="img-fluid" src="assets/images/login/handhelp.jpg" alt="">
       </section>
       <section class="section-space cuba-demo-section components-section" id="components">
         <div class="container">

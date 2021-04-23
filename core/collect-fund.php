@@ -31,7 +31,7 @@ include('nav.php');
             if (mysqli_num_rows($query_check_account) <= 0) {
             ?>
               <!-- Individual column searching (text inputs) Starts-->
-              <div class="col-xxl-8 box-col-12">
+              <div class="col-xxl-12 box-col-12">
                 <div class="card">
                   <div class="card-header py-4">
                     <h5>Bank Details - Add Local Bank </h5>
@@ -92,7 +92,7 @@ include('nav.php');
             ?>
 
               <!-- we done Adding Account -->
-              <div class="col-xxl-8 box-col-12">
+              <div class="col-xxl-12 box-col-12">
                 <div class="card">
                   <div class="card-header py-4">
                     <h5><?php echo $fund_title; ?> </h5>
@@ -142,7 +142,7 @@ include('nav.php');
               <!-- Container-fluid Ends-->
 
               <!-- Transactions -->
-              <div class="col-xxl-8 box-col-12">
+              <div class="col-xxl-12 box-col-12">
                 <div class="card">
                   <div class="card-header py-4">
                     <h5>Withdrawal Transactions </h5>

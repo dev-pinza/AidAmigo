@@ -46,97 +46,131 @@ include('nav.php');
             <div class="tab-content" id="top-tabContent">
                 <div class="tab-pane fade show active" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
                 <div class="row">
+                <?php
+                // use a database
+                $current_date = date('Y-m-d H:i:s');
+                $query_get_fund = mysqli_query($connection, "SELECT * FROM `fund_raise` WHERE `user_id` = '$user_id' AND (due_date >= '$current_date' AND is_withdrawn = '0') AND is_active = '1' ORDER BY id DESC");
+                if (mysqli_num_rows($query_get_fund) > 0) {
+                    while ($row = mysqli_fetch_array($query_get_fund)) {
+                    $fund_id = $row["id"];
+                    $goal_amount = $row["goal_amount"];
+                    $amount_raised = $row["amount_raised"];
+                    $public_link = $row["public_link"];
+
+                    // difference and percentage difference
+                    $diff_cal = $amount_raised - $goal_amount;
+                    // color change
+                    // name badge change
+                    // progress bar type
+                    if ($diff_cal < 0) {
+                        $color = "primary";
+                        $badge_name = "In-Progress";
+                        $progress_bar_type = "progress-bar-striped";
+                    } else {
+                        $color = "success";
+                        $badge_name = "Done";
+                        $progress_bar_type = "";
+                    }
+                    
+                    // summary of transaction
+                    $query_total_paid = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_all  FROM `fund_raise_transaction` WHERE fund_id	= '$fund_id'");
+                    // summary of today transaction
+                    $query_total_today = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_today  FROM `fund_raise_transaction` WHERE fund_id	= '$fund_id' AND `date` = '$current_date'");
+
+                    $qtp = mysqli_fetch_array($query_total_paid);
+                    $qtt = mysqli_fetch_array($query_total_today);
+
+                    $total_all = $qtp["fund_id_all"];
+                    $total_today = $qtt["fund_id_today"];
+
+                    // while loop of entities LIMIT 5
+                    
+                    // progress bar amount computation
+                    $diff_per = ($amount_raised / $goal_amount) * 100;
+                    // round up
+                    $progress_difference = round($diff_per);
+
+                ?>
                     <div class="col-xxl-4 col-lg-6">
-                    <div class="project-box"><span class="badge badge-primary">In-Progress</span>
-                        <h6>Help Terminate Malaria in Katsina</h6>
+                    <div class="project-box"><span class="badge badge-<?php echo $color; ?>"><?php echo $badge_name; ?></span>
+                        <h6><?php echo $row["campaign_title"]; ?></h6>
                         <div class="media">
                             <!-- <img class="img-20 me-1 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title=""> -->
                         <div class="media-body">
-                            <p>Global Medical FundRaise, Nigeria 2020-04-15</p>
+                            <p><?php echo $row["category"].' - Created '.$row["created_date"]; ?></p>
                         </div>
                         </div>
-                        <p>Help and funding are needed urgently for thousands of people in the north region of Nigeria, Gamboru village in Borno State Nigeria...</p>
+                        <p><?php echo  substr($row["story_body"], -40).'...'; ?></p>
                         <div class="row details">
                         <div class="col-6"><span>Total Contribution</span></div>
-                        <div class="col-6 text-primary">40 </div>
+                        <div class="col-6 text-<?php echo $color; ?>"><?php echo number_format($total_all); ?> </div>
                         <div class="col-6"> <span>Contribution Today</span></div>
-                        <div class="col-6 text-primary">5</div>
+                        <div class="col-6 text-<?php echo $color; ?>"><?php echo number_format($total_today); ?></div>
                         </div>
                         <div class="customers">
                         <ul>
+                        <?php
+                        $query_three_trans = mysqli_query($connection, "SELECT * FROM `fund_raise_transaction` WHERE fund_id = '$fund_id' ORDER BY id DESC LIMIT 3");
+
+                        while ($rowx = mysqli_fetch_array($query_three_trans)){
+                        ?>
                             <li class="d-inline-block"><img class="img-30 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title=""></li>
-                            <li class="d-inline-block"><img class="img-30 rounded-circle" src="../assets/images/user/5.jpg" alt="" data-original-title="" title=""></li>
-                            <li class="d-inline-block"><img class="img-30 rounded-circle" src="../assets/images/user/1.jpg" alt="" data-original-title="" title=""></li>
+                            <?php 
+                        }
+                            ?>
                             <li class="d-inline-block ms-2">
-                            <p class="f-12">+10 More</p>
+                            <p class="f-12">+<?php
+                            if ($total_all > 3) {
+                                echo $total_all - 3;
+                            } else {
+                                echo 0;
+                            }
+                            ?> More</p>
                             </li>
+                            
                         </ul>
                         </div>
                         <div class="project-status mt-4">
                         <div class="media mb-0">
-                            <p>$7,000 </p>
-                            <div class="media-body text-end"><span>$10,000</span></div>
+                            <p><?php echo '₦ '.number_format($row["amount_raised"]); ?> </p>
+                            <div class="media-body text-end"><span><?php echo '₦ '.number_format($row["goal_amount"]); ?></span></div>
                         </div>
                         <div class="progress" style="height: 5px">
-                            <div class="progress-bar-animated bg-primary progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar-animated bg-<?php echo $color; ?> <?php echo $progress_bar_type; ?>" role="progressbar" style="width: <?php echo $progress_difference; ?>%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         </div>
                         <!-- Action buttons -->
                         <div class="customers mt-4">
                             <center>
-                        <button class="btn btn-pill btn-success btn-air-success" type="button" title="Withdraw the FundRaised">Collect Fund</button>
-                        <button class="btn btn-pill btn-warning btn-air-warning" type="button" title="You only get to Edit Once! ">Edit Once</button>
-                        <button class="btn btn-pill btn-light btn-air-light" type="button" title="Share">Share Link</button>
+                        <a class="btn btn-pill btn-success btn-air-success" type="button" title="Withdraw the FundRaised" href="collect-fund.php?public-link=<?php echo $public_link; ?>">Collect Fund</a>
+                        <a class="btn btn-pill btn-warning btn-air-warning" href="fund.php?public-link=<?php echo $public_link; ?>" type="button" title="View">View</a>
+                        <a class="btn btn-pill btn-light btn-air-light" type="button" title="Share">Share Link</a>
                         </center>
                         </div>
                     </div>
                     </div>
-                    <div class="col-xxl-4 col-lg-6">
-                    <div class="project-box"><span class="badge badge-success">Done</span>
-                        <h6>Help Keep Lions in Nigeria</h6>
+                   <?php
+                    }
+                } else {
+                    ?>
+                    
+                    <div class="col-xxl-12 col-lg-12">
+                    <center>
+                    <div class="project-box">
+                        <h6>Hola! Welcome, <?php echo $first_name; ?></h6>
                         <div class="media">
-                            <!-- <img class="img-20 me-1 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title=""> -->
-                        <div class="media-body">
-                            <p>Global Animal Fundraising, Nigeria 2020-12-14</p>
                         </div>
-                        </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="row details">
-                        <div class="col-6"><span>Total Contribution</span></div>
-                        <div class="col-6 text-success">600 </div>
-                        <div class="col-6"> <span>Contribution Today</span></div>
-                        <div class="col-6 text-success">10</div>
-                        </div>
-                        <div class="customers">
-                        <ul>
-                            <li class="d-inline-block"><img class="img-30 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title=""></li>
-                            <li class="d-inline-block"><img class="img-30 rounded-circle" src="../assets/images/user/5.jpg" alt="" data-original-title="" title=""></li>
-                            <li class="d-inline-block"><img class="img-30 rounded-circle" src="../assets/images/user/1.jpg" alt="" data-original-title="" title=""></li>
-                            <li class="d-inline-block ms-2">
-                            <p class="f-12">+3 More</p>
-                            </li>
-                        </ul>
-                        </div>
-                        <div class="project-status mt-4">
-                        <div class="media mb-0">
-                            <p>$239,000 </p>
-                            <div class="media-body text-end"><span>Done - $200,000</span></div>
-                        </div>
-                        <div class="progress" style="height: 5px">
-                            <div class="progress-bar-animated bg-success" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        </div>
+                        <p>CLICK BELOW TO CREATE A FUND RAISE</p>
                         <!-- Action button -->
                         <div class="customers mt-4">
-                            <center>
-                        <button class="btn btn-pill btn-success btn-air-success" type="button" title="Withdraw the FundRaised">Collect Fund</button>
-                        <button class="btn btn-pill btn-warning btn-air-warning" type="button" title="You only get to Edit Once! ">Edit Once</button>
-                        <button class="btn btn-pill btn-light btn-air-light" type="button" title="Share">Share Link</button>
-                        </center>
+                        <a class="btn btn-pill btn-success btn-air-success" href="request-fund.php" type="button">Create FundRaise</a>
                         </div>
                     </div>
+                    </center>
                     </div>
-                   
+                    <?php
+                }
+                   ?>
                 </div>
                 </div>
             </div>

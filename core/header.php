@@ -122,12 +122,13 @@ if ($_SESSION["loggedin"] != true) {
                   #query notification.
                   $query_notify = mysqli_query($connection, "SELECT * FROM `notification` WHERE user_id = '$user_id' AND is_read = '0' ORDER BY id DESC LIMIT 5");
                   if (mysqli_num_rows($query_notify) > 0) {
-                    $gn = mysqli_fetch_array($query_notify);
+                    while ($gn = mysqli_fetch_array($query_notify)){
                   ?>
                   <li>
                     <p><i class="fa fa-circle-o me-3 font-primary"> </i> <?php echo $gn["message"]; ?><span class="pull-right"><?php echo $gn["date"]; ?></span></p>
                   </li>
                   <?php
+                    }
                   } else {
                     ?>
                     <li>
@@ -137,7 +138,7 @@ if ($_SESSION["loggedin"] != true) {
                   }
                   ?>
                   <!-- END PHP NOTIFICATION -->
-                  <li><a class="btn btn-primary" href="notification.php">Check all notification</a></li>
+                  <li><a class="btn btn-primary" href="#">Check all notification</a></li>
                 </ul>
               </li>
               <li>
