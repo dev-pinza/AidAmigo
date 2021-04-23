@@ -117,7 +117,7 @@ include('nav.php');
                           <br>
                           <br>
                           <?php 
-                          if (isset($_GET["public-id"])) {
+                          if (isset($_GET["public-link"])) {
                           ?>
                           <div class="mb-3">
                           <input class="form-control" style="text-transform: uppercase;" type="text" readonly placeholder="$30,000">

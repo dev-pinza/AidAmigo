@@ -104,7 +104,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                       
                       <hr>
                       <div class="m-t-15">
-                        <button class="btn btn-success m-r-10" type="button" title="" data-bs-toggle="modal" data-bs-target="#myModal"> <i class="fa fa-shopping-basket me-1"></i>Donate Now</button><button class="btn btn-secondary"> <i class="fa fa-heart me-1"></i>Share Now</button>
+                        <button class="btn btn-success m-r-10" type="button" title="" data-bs-toggle="modal" data-bs-target="#myModal"> <i class="fa fa-shopping-basket me-1"></i>Donate Now</button><button class="btn btn-secondary" onclick="myFunction()"> <i class="fa fa-heart me-1"></i>Share Now</button>
                       </div>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                           </li>
                           <br>
                           <li>
-                            <button class="btn btn-secondary btn-lg" href="#"> <i class="fa fa-heart me-1"></i>Share Now</button>
+                            <button class="btn btn-secondary btn-lg" onclick="myFunction()"> <i class="fa fa-heart me-1"></i>Share Now</button>
                           </li>
                           <!-- <li>Watches</li>
                           <li>ACCESSORIES</li> -->
@@ -218,6 +218,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                                             ?>
                                             <input class="form-control" id="reference-id" hidden value="<?php echo $activation_code; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
                                             <input class="form-control" id="public-link" hidden value="<?php echo $public_link; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
+                                            <input class="form-control" id="copy-header" hidden value="<?php echo $row["campaign_title"]; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
                                           </div>
                                           <div class="mb-3">
                                               <a onclick="payWithPaystack()" class="btn btn-pill btn-success btn-air-success">Proceed</a>
@@ -260,6 +261,33 @@ function payWithPaystack() {
     },
   });
   handler.openIframe();
+}
+</script>
+<script>
+  // COPY OR SHARE JAVASCRIPT
+  function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("copy-header");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  var publick = document.getElementById('public-link').value;
+  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://growfund.com.ng/core/fund.php?public-link='+publick;
+
+  // SWEET ALERT SUCCESS
+  swal.fire({
+    type: "success",
+    title: "Content Copied",
+    text: copied_value,
+    showConfirmButton: false,
+    timer: 9000
+  });
 }
 </script>
                                       </div>

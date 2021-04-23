@@ -49,6 +49,7 @@ include('nav.php');
                 <?php
                 // use a database
                 $current_date = date('Y-m-d H:i:s');
+                $current_date_x = date('Y-m-d').' 00:00:00';
                 $query_get_fund = mysqli_query($connection, "SELECT * FROM `fund_raise` WHERE `user_id` = '$user_id' AND (due_date >= '$current_date' AND is_withdrawn = '0') AND is_active = '1' ORDER BY id DESC");
                 if (mysqli_num_rows($query_get_fund) > 0) {
                     while ($row = mysqli_fetch_array($query_get_fund)) {
@@ -73,9 +74,9 @@ include('nav.php');
                     }
                     
                     // summary of transaction
-                    $query_total_paid = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_all  FROM `fund_raise_transaction` WHERE fund_id	= '$fund_id'");
+                    $query_total_paid = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_all  FROM `fund_raise_transaction` WHERE fund_id = '$fund_id'");
                     // summary of today transaction
-                    $query_total_today = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_today  FROM `fund_raise_transaction` WHERE fund_id	= '$fund_id' AND `date` = '$current_date'");
+                    $query_total_today = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_today  FROM `fund_raise_transaction` WHERE fund_id	= '$fund_id' AND `date` > '$current_date_x'");
 
                     $qtp = mysqli_fetch_array($query_total_paid);
                     $qtt = mysqli_fetch_array($query_total_today);

@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+include("functions/db/connect.php");
 ?>
 <body class="landing-page" onload="startTime()">
 <div class="loader-wrapper">
@@ -32,9 +33,9 @@ include('header.php');
                 <button class="navbar-toggler navabr_btn-set custom_nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <div class="navbar-collapse justify-content-end collapse hidenav" id="navbarDefault">
                   <ul class="navbar-nav navbar_nav_modify" id="scroll-spy">
-                    <li class="nav-item"><a class="nav-link" href="#layout">FundRaiser</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layout">FundRaising</a></li>
                     <li class="nav-item"><a class="nav-link" href="#components">Investment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#applications">Global Funding</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#applications">Donate</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                     <li class="nav-item buy-btn"><a class="nav-link js-scroll" href="signup.php" target="_blank">Start a GrowFund</a></li>
                   </ul>
@@ -64,15 +65,15 @@ include('header.php');
       </div>
 
       
-      <section class="section-space cuba-demo-section bg-Widget pb-0 bg-primary">
+      <section id="layout" class="section-space cuba-demo-section bg-Widget pb-0 bg-primary">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 wow pulse">
               <div class="cuba-demo-content mt50">
                 <div class="couting">
-                  <h2>Cards</h2>
+                  <h2>FundRaising</h2>
                 </div>
-                <p>So many unique cards</p>
+                <p>GrowFund for any cause</p>
               </div>
             </div>
           </div>
@@ -86,25 +87,28 @@ include('header.php');
                 <div class="col-sm-3 col-5"><img class="img-fluid landing-card" src="assets/images/login/fund_home_2.jpg" alt=""></div>
                 <div class="col-sm-8 col-12">
                   <div class="row">
-                    <div class="col-6"><img class="img-fluid landing-card" src="assets/images/landing/cards/4.jpg" alt=""></div>
-                    <div class="col-6"><img class="img-fluid landing-card" src="assets/images/landing/cards/5.jpg" alt=""></div>
-                    <div class="col-5"><img class="img-fluid landing-card" src="assets/images/landing/cards/7.jpg" alt=""></div>
-                    <div class="col-7"><img class="img-fluid landing-card" src="assets/images/landing/cards/8.jpg" alt=""></div>
+                    <div class="col-6"><img class="img-fluid landing-card" src="assets/images/event/1.jpg" alt=""></div>
+                    <div class="col-6"><img class="img-fluid landing-card" src="assets/images/event/2.jpg" alt=""></div>
+                    <div class="col-5"><img class="img-fluid landing-card" src="assets/images/event/3.jpg" alt=""></div>
+                    <div class="col-7"><img class="img-fluid landing-card" src="assets/images/event/5.jpg" alt=""></div>
                   </div>
                 </div>
                 <div class="col-sm-4 col-12">
                   <div class="row">
-                    <div class="col-sm-12 col-6"><img class="img-fluid landing-card" src="assets/images/landing/cards/6.jpg" alt=""></div>
-                    <div class="col-sm-12 col-6"><img class="img-fluid landing-card" src="assets/images/landing/cards/9.jpg" alt=""></div>
+                    <div class="col-sm-12 col-6"><img class="img-fluid landing-card" src="assets/images/event/4.jpg" alt=""></div>
+                    <div class="col-sm-12 col-6"><img class="img-fluid landing-card" src="assets/images/event/6.jpg" alt=""></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="row">
-                <div class="col-lg-12 col-sm-4"><img class="img-fluid landing-card" src="assets/images/landing/cards/10.jpg" alt=""></div>
-                <div class="col-md-6 col-sm-4"><img class="img-fluid landing-card" src="assets/images/landing/cards/15.jpg" alt=""><img class="img-fluid landing-card" src="assets/images/landing/cards/11.jpg" alt=""><img class="img-fluid landing-card" src="assets/images/landing/cards/21.jpg" alt=""></div>
-                <div class="col-md-6 col-sm-4"><img class="img-fluid landing-card" src="assets/images/landing/cards/14.jpg" alt=""><img class="img-fluid landing-card" src="assets/images/landing/cards/13.jpg" alt=""></div>
+                <div class="col-lg-12 col-sm-4"><img class="img-fluid landing-card" src="assets/images/event/7.jpg" alt=""></div>
+                <div class="col-md-6 col-sm-4"><img class="img-fluid landing-card" src="assets/images/event/8.jpg" alt="">
+                <img class="img-fluid landing-card" src="assets/images/event/10.jpg" alt="">
+                <img class="img-fluid landing-card" src="assets/images/event/11.jpg" alt=""></div>
+                <div class="col-md-6 col-sm-4"><img class="img-fluid landing-card" src="assets/images/event/9.png" alt="">
+                <img class="img-fluid landing-card" src="assets/images/event/12.jpg" alt=""></div>
               </div>
             </div>
           </div>
@@ -116,8 +120,8 @@ include('header.php');
             <div class="col-sm-12 wow pulse">
               <div class="cuba-demo-content mt50">
                 <div class="couting">
-                  <h2> Email</h2>
-                  <p> Usefull Templates</p>
+                  <h2> GrowFund</h2>
+                  <p> Signup to GrowFund for Community</p>
                 </div>
               </div>
             </div>
@@ -130,167 +134,57 @@ include('header.php');
             <div class="col-sm-12 wow pulse">
               <div class="cuba-demo-content mt50">
                 <div class="couting">
-                  <h2>UI</h2>
+                  <h2>Investment</h2>
                 </div>
-                <p>Components</p>
+                <p>We connect you with Angel Investors for your business</p>
               </div>
             </div>
           </div>
         </div>
+        <center>
+
         <div class="container container-modify">
           <div class="row component_responsive">
             <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/1.png" alt="">
-                <h6 class="m-0 Pt-4">SweetAlert2</h6>
+              <div class="component-hover-effect">
+                <!-- <img src="assets/images/landing/icon/1.png" alt=""> -->
+                <h6 class="m-0 Pt-4">Sign Up</h6>
               </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/2.png" alt="">
-                <h6 class="m-0">Avatar</h6>
+              <div class="component-hover-effect">
+                <!-- <img src="assets/images/landing/icon/2.png" alt=""> -->
+                <h6 class="m-0">Request a FundRaise</h6>
               </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/3.png" alt="">
-                <h6 class="m-0">Scrollable</h6>
+              <div class="component-hover-effect">
+                <!-- <img src="assets/images/landing/icon/2.png" alt=""> -->
+                <h6 class="m-0">Choose Business Category</h6>
               </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/4.png" alt="">
-                <h6 class="m-0">Tree view</h6>
+              <div class="component-hover-effect">
+                <!-- <img src="assets/images/landing/icon/2.png" alt=""> -->
+                <h6 class="m-0">Business Proposal Summary</h6>
               </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/5.png" alt="">
-                <h6 class="m-0">Bootstrap notify</h6>
+              <div class="component-hover-effect">
+                <!-- <img src="assets/images/landing/icon/2.png" alt=""> -->
+                <h6 class="m-0">Submit</h6>
               </div>
             </div>
             <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/6.png" alt="">
-                <h6 class="m-0">Rating </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/7.png" alt="">
-                <h6 class="m-0">Dropzone</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/8.png" alt="">
-                <h6 class="m-0">Tour</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/9.png" alt="">
-                <h6 class="m-0">Animated modal</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/10.png" alt="">
-                <h6 class="m-0">Owl Carousel</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/11.png" alt="">
-                <h6 class="m-0">Ribbons </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/12.png" alt="">
-                <h6 class="m-0">Pagination </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/13.png" alt="">
-                <h6 class="m-0">Steps </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/14.png" alt="">
-                <h6 class="m-0">Breadcrumb  </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/15.png" alt="">
-                <h6 class="m-0">Range Slider </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/16.png" alt="">
-                <h6 class="m-0">image cropper </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/17.png" alt="">
-                <h6 class="m-0">Sticky </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/18.png" alt="">
-                <h6 class="m-0">Progress </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/19.png" alt="">
-                <h6 class="m-0">Tooltip </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/20.png" alt="">
-                <h6 class="m-0">Spinners </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/21.png" alt="">
-                <h6 class="m-0">Dropdown </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/22.png" alt="">
-                <h6 class="m-0">Tabs </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/23.png" alt="">
-                <h6 class="m-0">Accordion  </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/24.png" alt="">
-                <h6 class="m-0">Navs</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/25.png" alt="">
-                <h6 class="m-0">Shadow</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/26.png" alt="">
-                <h6 class="m-0">state color</h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/27.png" alt="">
-                <h6 class="m-0">List  </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/28.png" alt="">
-                <h6 class="m-0">Grid </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/29.png" alt="">
-                <h6 class="m-0">Helper classes </h6>
-              </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6 component-col-set">
-              <div class="component-hover-effect"><img src="assets/images/landing/icon/30.png" alt="">
-                <h6 class="m-0">Typography</h6>
+              <div class="component-hover-effect">
+                <!-- <img src="assets/images/landing/icon/2.png" alt=""> -->
+                <h6 class="m-0">Get Feeback</h6>
               </div>
             </div>
           </div>
         </div>
+        </center>
+
       </section>
       <section class="section-space cuba-demo-section app_bg" id="applications">
         <div class="container">
@@ -298,9 +192,9 @@ include('header.php');
             <div class="col-sm-12 wow pulse">
               <div class="cuba-demo-content mt50">
                 <div class="couting">
-                  <h2>20+</h2>
+                  <h2>Donate! </h2>
                 </div>
-                <p>Usefull application</p>
+                <p>Top FundRaising</p>
               </div>
             </div>
           </div>
@@ -308,54 +202,41 @@ include('header.php');
         <div class="container-fluid container-modify apps">
           <div class="landing-slider">
             <div class="row">
+              <?php
+              $current_date = date('Y-m-d H:i:s');
+              $current_date_x = date('Y-m-d').' 00:00:00';
+              $query_get_fund = mysqli_query($connection, "SELECT * FROM `fund_raise` WHERE (due_date >= '$current_date' AND is_withdrawn = '0') AND is_active = '1' ORDER BY id DESC LIMIT 8");
+
+              if (mysqli_num_rows($query_get_fund) > 0) {
+                while ($row = mysqli_fetch_array($query_get_fund)) {
+                  $public_link = $row["public_link"];
+              ?>
               <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/social-app.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/social-app.jpg" alt=""></a></div>
-                <h4>Social App</h4>
+                <div class="img-effect mb-3"><a href="core/fund.php?public-link=<?php echo $public_link; ?>" target="_blank"><img class="img-fluid cuba-img" src="<?php echo $row["image_base64"]; ?>" alt=""></a></div>
+                <h4><?php echo $row["campaign_title"]; ?></h4>
               </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4"> 
-                <div class="img-effect mb-3"><a href="../theme/knowledgebase.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/knowlagebase-app.jpg" alt=""></a></div>
-                <h4>knowledgebase</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4"> 
-                <div class="img-effect mb-3"><a href="../theme/support-ticket.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/support-ticket-app.jpg" alt=""></a></div>
-                <h4>Support Ticket</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/email-application.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/mail-app.jpg" alt=""></a></div>
-                <h4>Email Dashboard</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/to-do.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/To-Do-app.jpg" alt=""></a></div>
-                <h4>To-Do</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/job-cards-view.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/job-search-app.jpg" alt=""></a></div>
-                <h4>Job Search</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/product-page.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/ecommerce-app.jpg" alt=""></a></div>
-                <h4>Ecommerce</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">                             
-                <div class="img-effect mb-3"><a href="../theme/kanban.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/apps/kanban.jpg" alt=""></a></div>
-                <h4>Kanban</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/file-manager.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/apps/file.jpg" alt=""></a></div>
-                <h4>File Manager</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">         
-                <div class="img-effect mb-3"><a href="../theme/projects.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/apps/project.jpg" alt=""></a></div>
-                <h4>Project</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/contacts.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/apps/contacts.jpg" alt=""></a></div>
-                <h4>Contacts</h4>
-              </div>
-              <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="../theme/chat.html" target="_blank"><img class="img-fluid cuba-img" src="assets/images/landing/apps/chat.jpg" alt=""></a></div>
-                <h4>Chat</h4>
-              </div>
+              <?php
+            }
+                } else {
+                    ?>
+                    
+                    <div class="col-xxl-12 col-lg-12">
+                    <center>
+                    <div class="project-box">
+                        <h6>Start A GrowFund</h6>
+                        <div class="media">
+                        </div>
+                        <p>CLICK BELOW TO GET STARTED</p>
+                        <!-- Action button -->
+                        <div class="customers mt-4">
+                        <a class="btn btn-pill btn-success btn-air-success" href="signup.php" type="button">Create FundRaise</a>
+                        </div>
+                    </div>
+                    </center>
+                    </div>
+                    <?php
+                }
+                   ?>
             </div>
           </div>
         </div>
@@ -366,252 +247,107 @@ include('header.php');
             <div class="col-sm-12 wow pulse">
               <div class="cuba-demo-content mt50">
                 <div class="couting">
-                  <h2>4+</h2>
+                  <h2>FundRaising Event</h2>
                 </div>
-                <p class="mb-0">Top Frameworks</p>
+                <p class="mb-0">Ranging Events</p>
               </div>
             </div>
             <div class="col-sm-12 framworks">                 
               <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item"><a class="nav-link d-flex active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"> <img src="assets/images/landing/icon/html/html.png" alt="">
+                <li class="nav-item"><a class="nav-link d-flex active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"> 
+                  <!-- <img src="assets/images/landing/icon/html/html.png" alt=""> -->
                     <div class="text-start">
-                      <h5 class="mb-0">HTML</h5>
-                      <p class="mb-0">Frameworks</p>
+                      <h5 class="mb-0">#1</h5>
+                      <p class="mb-0">Category</p>
                     </div></a></li>
-                <li class="nav-item"><a class="d-flex nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"> <img src="assets/images/landing/icon/react/react1.png" alt="">
+                <li class="nav-item"><a class="d-flex nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"> 
+                  <!-- <img src="assets/images/landing/icon/react/react1.png" alt=""> -->
                     <div class="text-start">
-                      <h5 class="mb-0">React</h5>
-                      <p class="mb-0">Frameworks</p>
+                      <h5 class="mb-0">#2</h5>
+                      <p class="mb-0">Category</p>
                     </div></a></li>
-                <li class="nav-item"><a class="d-flex nav-link" id="pills-angular-tab" data-bs-toggle="pill" href="#pills-angular" role="tab" aria-controls="pills-angular" aria-selected="false"> <img src="assets/images/landing/icon/angular/angular.svg" alt="">
+                <li class="nav-item"><a class="d-flex nav-link" id="pills-angular-tab" data-bs-toggle="pill" href="#pills-angular" role="tab" aria-controls="pills-angular" aria-selected="false">
+                   <!-- <img src="assets/images/landing/icon/angular/angular.svg" alt=""> -->
                     <div class="text-start">
-                      <h5 class="mb-0">Angular</h5>
-                      <p class="mb-0">Frameworks</p>
+                      <h5 class="mb-0">#3</h5>
+                      <p class="mb-0">Category</p>
                     </div></a></li>
-                <li class="nav-item"><a class="d-flex nav-link" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"> <img src="assets/images/landing/icon/laravel/laravel.png" alt="">
+                <li class="nav-item"><a class="d-flex nav-link" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                   <!-- <img src="assets/images/landing/icon/laravel/laravel.png" alt=""> -->
                     <div class="text-start">
-                      <h5 class="mb-0">Laravel</h5>
-                      <p class="mb-0">Frameworks</p>
+                      <h5 class="mb-0">#4</h5>
+                      <p class="mb-0">Category</p>
                     </div></a></li>
               </ul>
               <div class="tab-content mt-5" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                   <ul class="framworks-list">
                     <li class="box wow fadeInUp">
-                      <div> <img src="assets/images/landing/icon/html/bootstrap.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Booxstrap 4X</h6>
+                      <div> 
+                      <h6 class="mb-0 mt-3">Medical</h6>
                     </li>
                     <li class="box wow fadeInUp">
-                      <div> <img src="assets/images/landing/icon/html/css.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">CSS</h6>
+                      <h6 class="mb-0 mt-3">Memorial</h6>
                     </li>
                     <li class="box wow fadeInUp">
-                      <div> <img src="assets/images/landing/icon/html/sass.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Sass</h6>
+                      <h6 class="mb-0 mt-3">Emergency</h6>
                     </li>
                     <li class="box wow fadeInUp">
-                      <div> <img src="assets/images/landing/icon/html/pug.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Pug</h6>
-                    </li>
-                    <li class="box wow fadeInUp">
-                      <div> <img src="assets/images/landing/icon/html/npm.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">NPM</h6>
-                    </li>
-                    <li class="box wow fadeInUp">
-                      <div> <img src="assets/images/landing/icon/html/gulp.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Gulp</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                   
-                      <div> <img src="assets/images/landing/icon/html/kit.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Starter Kit</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/uikits.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">40+ UI Kits</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/layout.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">8+ Layout</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/builders.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Builders</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/iconset.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">11 Icon Sets</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/forms.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Forms</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/table.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Tables</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/html/apps.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">17+ Apps</h6>
+                      <h6 class="mb-0 mt-3">Nonprofit</h6>
                     </li>
                   </ul>
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                   <ul class="framworks-list">
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/hook.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">React Hook</h6>
+                      <h6 class="mb-0 mt-3">Education</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/reactstrap.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">React Strap</h6>
+                      <h6 class="mb-0 mt-3">Animals</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/noquery.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">No Jquery</h6>
+                      <h6 class="mb-0 mt-3">Environment</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/redux.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Redux</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/firebase.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Firebase Auth</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/crud.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Firebase Crud</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/chat.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Chat</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/animation.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Router Animation</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/props_state.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">State & Props</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/react/reactrouter.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Reactrouter</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/react/chart.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Amazing Chart</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/react/map.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Map</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/react/gallery.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Gallery</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/react/application.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">9+ Apps</h6>
+                      <h6 class="mb-0 mt-3">Business</h6>
                     </li>
                   </ul>
                 </div>
                 <div class="tab-pane fade" id="pills-angular" role="tabpanel" aria-labelledby="pills-angular-tab">
                   <ul class="framworks-list">
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/1.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">SCSS</h6>
+                      <h6 class="mb-0 mt-3">Community</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/2.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Ng Bootstrap</h6>
+                      <h6 class="mb-0 mt-3">Competition</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/3.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">RXjs</h6>
+                      <h6 class="mb-0 mt-3">Creative</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/4.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Router</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/5.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Form</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/6.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Apex chart</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/7.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Chart.js</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/8.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Chartist</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/9.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Google Map</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/angular/10.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Gallery</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/angular/11.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Ecommerce</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/angular/12.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Firebase Auth</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/angular/13.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Firebase Crud</h6>
-                    </li>
-                    <li class="box wow bounceIn">                                    
-                      <div> <img src="assets/images/landing/icon/angular/14.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Chat</h6>
+                      <h6 class="mb-0 mt-3">Event</h6>
                     </li>
                   </ul>
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                   <ul class="framworks-list">
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/laravel.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Laravel 7</h6>
+                      <h6 class="mb-0 mt-3">Faith</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/bootstrap.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Bootstrap 5</h6>
+                      <h6 class="mb-0 mt-3">Family</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/html/sass.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">SASS</h6>
+                      <h6 class="mb-0 mt-3">Sports</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/blade.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Blade</h6>
+                      <h6 class="mb-0 mt-3">Travel</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/layouts.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Layouts</h6>
+                      <h6 class="mb-0 mt-3">Volunteer</h6>
                     </li>
                     <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/npm.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">NPM</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/mix.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">MIX</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/yarn.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Yarn</h6>
-                    </li>
-                    <li class="box">
-                      <div> <img src="assets/images/landing/icon/laravel/sasswebpack.png" alt=""></div>
-                      <h6 class="mb-0 mt-3">Sasswebpack</h6>
+                      <h6 class="mb-0 mt-3">Wishes</h6>
                     </li>
                   </ul>
                 </div>
