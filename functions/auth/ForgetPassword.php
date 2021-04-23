@@ -5,8 +5,7 @@
 // send a mail to change
 
 #include PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-require '../../vendor/autoload.php';
+require_once "../../bat/phpmailer/PHPMailerAutoload.php";
 
 if (isset($_POST["email"])) {
     $email = $_POST["email"];

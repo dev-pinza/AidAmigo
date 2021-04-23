@@ -11,8 +11,7 @@
 include('../db/connect.php');
 
 #include PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-require '../../vendor/autoload.php';
+require_once "../../bat/phpmailer/PHPMailerAutoload.php";
 
 
 if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_name"])) {
