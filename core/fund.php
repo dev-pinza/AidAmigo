@@ -230,7 +230,7 @@ var paymentForm = document.getElementById('paymentForm');
 paymentForm.addEventListener('submit', payWithPaystack, false);
 function payWithPaystack() {
   var handler = PaystackPop.setup({
-    key: 'pk_test_f908ee1079859b67641ff46145d5bba8ea6992fe', // Replace with your public key
+    key: 'pk_live_b19068b06305c296d45aa5bed13b19dd5fbe6225', // Replace with your public key
     email: document.getElementById('email-address').value,
     amount: document.getElementById('amount').value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
     currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
