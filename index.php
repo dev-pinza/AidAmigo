@@ -83,14 +83,14 @@ include("functions/db/connect.php");
             <div class="col-lg-8">
               <div class="row">
                 <div class="col-sm-5 col-12"><img class="img-fluid landing-card" src="assets/images/login/liftingothers.jpg" alt=""></div>
-                <!-- <div class="col-sm-4 col-7"><img class="img-fluid landing-card" src="assets/images/login/bulb.jpg" alt=""></div>
-                <div class="col-sm-3 col-5"><img class="img-fluid landing-card" src="assets/images/login/fund_home_2.jpg" alt=""></div> -->
+                <div class="col-sm-4 col-7"><img class="img-fluid landing-card" src="assets/images/login/bulb.jpg" alt=""></div>
+                <div class="col-sm-3 col-5"><img class="img-fluid landing-card" src="assets/images/login/fund_home_2.jpg" alt=""></div> 
                 <div class="col-sm-8 col-12">
                   <div class="row">
                     <div class="col-6"><img class="img-fluid landing-card" src="assets/images/event/1.jpg" alt=""></div>
                     <div class="col-6"><img class="img-fluid landing-card" src="assets/images/event/2.jpg" alt=""></div>
                     <div class="col-5"><img class="img-fluid landing-card" src="assets/images/event/3.jpg" alt=""></div>
-                    <!-- <div class="col-7"><img class="img-fluid landing-card" src="assets/images/event/5.jpg" alt=""></div> -->
+                    <div class="col-7"><img class="img-fluid landing-card" src="assets/images/event/5.jpg" alt=""></div> 
                   </div>
                 </div>
                 <div class="col-sm-4 col-12">
@@ -108,7 +108,7 @@ include("functions/db/connect.php");
                 <img class="img-fluid landing-card" src="assets/images/event/10.jpg" alt="">
                 <img class="img-fluid landing-card" src="assets/images/event/11.jpg" alt=""></div>
                 <div class="col-md-6 col-sm-4"><img class="img-fluid landing-card" src="assets/images/event/9.png" alt="">
-                <!-- <img class="img-fluid landing-card" src="assets/images/event/12.jpg" alt=""></div> -->
+                <img class="img-fluid landing-card" src="assets/images/event/12.jpg" alt=""></div> 
               </div>
             </div>
           </div>
