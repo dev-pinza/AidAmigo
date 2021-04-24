@@ -57,7 +57,7 @@ include('../functions/db/connect.php');
     gtag('config', 'G-MT516R5N90')
     </script>
   </head>
-  <body onload="startTime()">
+  <body>
   <!-- <div class="loader-wrapper">
       <div class="loader-index"><span></span></div>
       <svg>
