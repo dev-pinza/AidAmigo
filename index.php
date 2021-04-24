@@ -212,7 +212,7 @@ include("functions/db/connect.php");
                   $public_link = $row["public_link"];
               ?>
               <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
-                <div class="img-effect mb-3"><a href="core/fund.php?public-link=<?php echo $public_link; ?>" target="_blank"><img class="img-fluid cuba-img" src="<?php echo $row["image_base64"]; ?>" alt=""></a></div>
+                <div class="img-effect mb-3"><a href="core/fund.php?public-link=<?php echo $public_link; ?>" target="_blank"><img class="img-fluid cuba-img" src="<?php echo $row["image_base64"]; ?>" height="400px" width="400px" alt=""></a></div>
                 <h4><?php echo $row["campaign_title"]; ?></h4>
               </div>
               <?php
