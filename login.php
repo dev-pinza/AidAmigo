@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_write_close();                            
                             //run a quick code to show active user
                             // Redirect user to welcome page
-                            if ($stmt->num_rows ==1 && $_SESSION["email_confimed"] == '1') {
+                            if ($stmt->num_rows ==1 && $_SESSION["loggedin"] === true) {
                               header("location: core/index.php");
                             }else {
                               $email_err = "Please verify your account";
