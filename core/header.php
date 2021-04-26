@@ -14,9 +14,9 @@ $first_name = $_SESSION["first_name"];
 $middle_name = $_SESSION["middle_name"];
 $last_name = $_SESSION["last_name"];
 
-if ($email_confimed == "0") {
-  echo header("location:  ../functions/auth/LogOut.php");
-}
+// if ($email_confimed == "0") {
+//   echo header("location:  ../functions/auth/LogOut.php");
+// }
 if ($_SESSION["loggedin"] != true) {
   echo header("location:  ../functions/auth/LogOut.php");
 }

@@ -206,12 +206,16 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                                           </div>
                                           </div>
                                           <div class="mb-3">
-                                          <label class="form-label" for="validationCustomUsername">Fullname</label>
-                                            <input class="form-control" type="text" id="fullname" placeholder="Anonymous" aria-describedby="inputGroupPrepend" required="">
+                                          <label class="form-label" for="validationCustomUsername">Fullname (edit to display name)</label>
+                                            <input class="form-control" type="text" id="fullname" value="Anonymous" aria-describedby="inputGroupPrepend" required="">
                                           </div>
                                           <div class="mb-3">
-                                          <label class="form-label" for="validationCustomUsername">E-mail</label>
-                                            <input class="form-control" id="email-address" type="email" placeholder="person@example.com" aria-describedby="inputGroupPrepend" required="">
+                                          <?php
+                                            $digitx = 7;
+                                            $activation_code = str_pad(rand(0, pow(10, $digitx)-1), $digitx, '0', STR_PAD_LEFT); 
+                                            ?>
+                                          <label class="form-label" for="validationCustomUsername">E-mail (edit to display email)</label>
+                                            <input class="form-control" id="email-address" type="email" value="<?php echo $rand_email."@nomail.com"; ?>" placeholder="person@example.com" aria-describedby="inputGroupPrepend" required="">
                                             <?php
                                             $digits = 12;
                                             $activation_code = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT); 
