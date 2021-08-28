@@ -1,2 +1,10 @@
-# GrowFund
-Grow Fund is an African for-profit crowdfunding platform that allows people to raise money for events ranging from life events such as celebrations and graduations to challenging circumstances like accidents and illnesses.
+requires:
+
+    1. yarn (https://yarnpkg.com);
+    2. node.js (https://nodejs.org).
+
+in project folder run cmd:
+
+    1. install all dependencies: 'yarn';
+    2. build + local server start: 'gulp dev';
+    3. build only: 'gulp build'.
