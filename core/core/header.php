@@ -32,7 +32,7 @@ if ($_SESSION["loggedin"] != true) {
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="../../assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" type="image/x-icon">
     <link rel="shortcut icon" href="../../assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" type="image/x-icon">
-    <title>AidAmigo - <?php echo $web_title; ?></title>
+    <title>Aid Amigo - <?php echo $web_title; ?></title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">

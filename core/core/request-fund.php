@@ -8,7 +8,7 @@ include('nav.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>GrowFund - Request FundRaise</h3>
+                  <h3>Aid Amigo - Request FundRaise</h3>
                 </div>
                 <div class="col-6">
                   <ol class="breadcrumb">
@@ -122,17 +122,47 @@ include('nav.php');
                         </div>
                         <!-- </div> -->
                         <div class="mb-2">
-                        <label>Upload Main Image - < 3MB</label>
-                        <!-- image upload -->
-                        <div class="form-group" x-data="{ fileName: '' }">
-                          <div class="input-group shadow">
-                            <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
-                            <input type="file" name="image" onchange="ValidateSize(this)" accept="image/png,image/jpg,image/jpeg" class="form-control" required>
+                          <label>Upload Front Image - < 3MB</label>
+                          <!-- image upload -->
+                          <div class="form-group" x-data="{ fileName: '' }">
+                              <div class="input-group shadow">
+                                <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
+                                  <input type="file" name="image" onchange="ValidateSize(this)" accept="image/png,image/jpg,image/jpeg" class="form-control" required>
                             <!-- <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
                             <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button> -->
+                              </div>
                           </div>
+
                         </div>
+
+                        <div class="mb-2">
+                          <label>Upload Middle Image - < 3MB</label>
+                          <!-- image upload -->
+                          <div class="form-group" x-data="{ fileName: '' }">
+                              <div class="input-group shadow">
+                                <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
+                                  <input type="file" name="image_middle" onchange="ValidateSize(this)" accept="image/png,image/jpg,image/jpeg" class="form-control" required>
+                            <!-- <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
+                            <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button> -->
+                              </div>
+                          </div>
+
                         </div>
+
+                        <div class="mb-2">
+                          <label>Upload Last Image - < 3MB</label>
+                          <!-- image upload -->
+                          <div class="form-group" x-data="{ fileName: '' }">
+                              <div class="input-group shadow">
+                                <span class="input-group-text px-3 text-muted"><i class="fa fa-file-image-o"></i></span>
+                                  <input type="file" name="image_last" onchange="ValidateSize(this)" accept="image/png,image/jpg,image/jpeg" class="form-control" required>
+                            <!-- <input type="text" readonly class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
+                            <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fa fa-file-photo-o"></i> Browse</button> -->
+                              </div>
+                          </div>
+
+                        </div>
+
                         <div class="f1-buttons">
                           <button class="btn btn-primary btn-previous" type="button">Previous</button>
                           <button disabled class="btn btn-primary btn-submit" id="action_button" type="submit">Submit</button>

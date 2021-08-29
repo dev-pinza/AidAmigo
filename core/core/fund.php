@@ -73,7 +73,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
               <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header">
-                    <h5>GrowFund #2021</h5>
+                    <h5>Aid Amigo - Aid A Friend</h5>
                   </div>
                   <div class="card-body">
                   <div class="row product-page-main p-0">
