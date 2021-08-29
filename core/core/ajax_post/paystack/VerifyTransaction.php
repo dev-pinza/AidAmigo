@@ -17,7 +17,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => array(
-      "Authorization: Bearer sk_live_6fa11470f62be3e8f3225ad2a98f4ce87305e9a5",
+      "Authorization: Bearer sk_live_6908f42b262f4f378257ab04af356ab20a0e8cbd",
       "Cache-Control: no-cache",
     ),
   ));

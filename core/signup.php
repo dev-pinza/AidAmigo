@@ -65,7 +65,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
               <div class="wizard-4" id="wizard">                       
                 <ul>
                   <li><a class="logo text-start ps-0" href="index.php">
-                    <img class="img-fluid for-light" src="assets/images/logo/growfund.png" height="200px" width="200px" alt="looginpage">
+                    <img class="img-fluid for-light" src="../assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" height="200px" width="200px" alt="looginpage">
                     <!-- <img class="img-fluid for-dark" src="assets/images/logo/growfund.png" height="200px" width="200px" alt="looginpage"> -->
                   </a>
                   </li>
@@ -209,8 +209,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       <!-- Plugin used-->
       <style>
         .wizard-4 .action-bar {
-    position: absolute;
-    bottom: 10px;
+    /* position: absolute; */
+    /* bottom: 10px; */
 }
       </style>
       <script>

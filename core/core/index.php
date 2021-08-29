@@ -9,7 +9,7 @@ include('nav.php');
         <div class="row">
         <div class="col-6">
             <h3>
-                Grow Fund - Dashboard</h3>
+                Aid Amigo - Dashboard</h3>
         </div>
         <div class="col-6">
             <ol class="breadcrumb">
@@ -166,7 +166,7 @@ include('nav.php');
 
   /* Alert the copied text */
   var publick = document.getElementById('public-link').value;
-  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://growfund.com.ng/core/fund.php?public-link='+publick;
+  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://aidamigo.com/core/core/fund.php?public-link='+publick;
 
   // SWEET ALERT SUCCESS
   swal.fire({

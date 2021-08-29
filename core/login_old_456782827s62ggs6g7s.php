@@ -159,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="col-xl-5">
             <!-- Start text -->
             <!-- End Text -->
-            <img class="bg-img-cover bg-center img-responsive" src="assets/images/logo/growfund.png" alt="looginpage">
+            <img class="bg-center img-responsive" src="../assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" alt="looginpage">
             <!-- End Image -->
         </div>
         <div class="col-xl-7 p-0">

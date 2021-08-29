@@ -3,7 +3,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12 footer-copyright text-center">
-                <p class="mb-0">Copyright <?php echo date('Y'); ?> © GrowFund by Pinza Studio.  </p>
+                <p class="mb-0">Copyright <?php echo date('Y'); ?> © Aid Amigo.  </p>
               </div>
             </div>
           </div>

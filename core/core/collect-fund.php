@@ -8,7 +8,7 @@ include('nav.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>GrowFund - Collect Fund</h3>
+                  <h3>Aid Amigo - Collect Fund</h3>
                 </div>
                 <div class="col-6">
                   <ol class="breadcrumb">

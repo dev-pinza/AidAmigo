@@ -17,7 +17,7 @@ if ($_SESSION["loggedin"] === true && $account_no != "" && $bank_code != "") {
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => array(
-        "Authorization: Bearer sk_live_7d955ca9d1f7814b697b4d10463d6853a5a48a0d",
+        "Authorization: Bearer sk_live_6908f42b262f4f378257ab04af356ab20a0e8cbd",
         "Cache-Control: no-cache",
         ),
     ));
