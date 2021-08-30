@@ -8,7 +8,7 @@
 // LIVE
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'aidannxv_core');
-define('DB_PASSWORD', 'w&nQ1_*,*j#.');
+define('DB_PASSWORD', '%{7FF&MT%~^W');
 define('DB_CHARSET', 'utf8');
 define('DB_NAME', 'aidannxv_aidamigo');
 
