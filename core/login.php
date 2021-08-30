@@ -134,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="card-body">
               <?php
               if (isset($_GET["return_message"])) {
-                $account = "Account created successfully"
+                $account = "Account created successfully";
               }
               ?>
                 <center>
