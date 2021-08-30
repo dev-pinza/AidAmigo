@@ -9,7 +9,7 @@ include('nav.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>GrowFund - Settings</h3>
+                  <h3>Aid Amigo - Settings</h3>
                 </div>
                 <div class="col-6">
                   <ol class="breadcrumb">
