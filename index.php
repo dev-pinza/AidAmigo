@@ -1000,6 +1000,5 @@ include("core/functions/db/connect.php");
 		<script src="assets/js/libs.min.js"></script>
 		<!-- scripts-->
 		<script src="assets/js/common.min.js"></script>
-
 	</body>
 </html>
