@@ -490,7 +490,7 @@ include("core/functions/db/connect.php");
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html"><?php echo $row["campaign_title"]; ?></a></h6>
+												<h6 class="causes-item__title"> <a href="fund.php?public-link=<?php echo $public_link; ?>"><?php echo $row["campaign_title"]; ?></a></h6>
 												<p><?php echo  substr($row["story_body"], -40).' ..read more'; ?></p>
 											</div>
 											<div class="causes-item__img">
