@@ -137,12 +137,12 @@ if (isset($_POST["email"]) && isset($_POST["country"]) && isset($_POST["first_na
                      if(!$mail->send()) 
                      {
                          echo "Mailer Error: " . $mail->ErrorInfo;
-                    echo header ("Location: ../../return_error.php?return_message=noemail&error_msg=$mail->ErrorInfo");
+                    echo header ("Location: ../../login.php?return_message=0&error_msg=$mail->ErrorInfo");
                          
                      } else
                      {
                          echo "Message has been sent successfully";
-                         echo header ("Location: ../../return_success.php");
+                         echo header ("Location: ../../login.php?return_message=1");
                      }
                 } else {
                     echo header ("Location: ../../return_error?return_message=nocoderecord&error_msg=Activation code not recorded for User $email");

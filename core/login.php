@@ -132,11 +132,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           </div>
           <div class="col-md-7">
             <div class="card-body">
+              <?php
+              if (isset($_GET["return_message"])) {
+                $account = "Account created successfully"
+              }
+              ?>
                 <center>
               <div class="brand-wrapper">
                 <img src="../assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" alt="logo" class="logo">
               </div>
               </center>
+              <span class="help-block" style="color:green;"><?php echo $account; ?></span>
               <p class="login-card-description">Sign into your account</p>
               <form method="POST">
                   <div class="form-group">
