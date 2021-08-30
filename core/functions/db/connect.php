@@ -10,7 +10,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'aidannxv_core');
 define('DB_PASSWORD', 'w&nQ1_*,*j#.');
 define('DB_CHARSET', 'utf8');
-define('DB_NAME', 'aidamigo');
+define('DB_NAME', 'aidannxv_aidamigo');
 
 $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
