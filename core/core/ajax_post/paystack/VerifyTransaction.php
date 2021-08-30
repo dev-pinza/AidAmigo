@@ -30,7 +30,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
   if ($err) {
     echo "cURL Error #:" . $err;
   } else {
-    //   echo $response;
+      echo $response;
 
     $obj = json_decode($response, TRUE);
     $status = $obj['status'];
