@@ -134,7 +134,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
             }
 
         } else {
-
+            echo "<b> Error with Payment </b>"
         }
     } else {
         echo "<b>Transaction already done!</b>";
