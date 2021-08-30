@@ -5,7 +5,6 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
 
     $reference = $_GET["reference"];
     $public_link = $_GET["publiclink"];
-    $fullname = $_GET["fullname"];
 
     $curl = curl_init();
   
@@ -30,7 +29,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
   if ($err) {
     echo "cURL Error #:" . $err;
   } else {
-      echo $response;
+    //   echo $response;
 
     $obj = json_decode($response, TRUE);
     $status = $obj['status'];
@@ -56,8 +55,11 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
     $cust_fd = $md["custom_fields"];
     $cdatas = json_encode($cust_fd);
     $cf = json_decode($cdatas, TRUE);
-    // $fullname = $cf["fullname"];
+    $fullname = $cf[0]["fullname"];
     $date = date('Y-m-d H:i:s');
+
+    // ECHO everything
+    echo {$fund_id}' + '{$amount}' + '{$balance_raised}' + '{$reference}' + '{$payment_status}' + '{$customer_code}' + '{$email}' + '{$fullname}' + '{$data_id}' + '{$date};
 
     // CHECK DATABASE
     $query_data = mysqli_query($connection, "SELECT * FROM `fund_raise_transaction` WHERE transaction_id = '$reference'");
