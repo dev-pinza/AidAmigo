@@ -302,7 +302,7 @@ function payWithPaystack() {
       var publick = document.getElementById('public-link').value;
       // Make an AJAX call to your server with the reference to verify the transaction
       $.ajax({
-        url: 'ajax_post/paystack/VerifyTransaction.php?reference='+ response.reference + '&publiclink='+ publick,
+        url: 'core/core/ajax_post/paystack/VerifyTransaction.php?reference='+ response.reference + '&publiclink='+ publick,
         method: 'GET',
         success: function (response) {
           // the transaction status is in response.data.status
