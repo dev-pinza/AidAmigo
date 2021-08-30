@@ -49,6 +49,7 @@ if ($_SESSION["loggedin"] != true) {
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
     <!-- <link rel="stylesheet" type="text/css" href="../assets/css/vendors/dropzone.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/datatables.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/date-picker.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->

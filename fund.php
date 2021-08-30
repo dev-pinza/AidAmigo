@@ -50,6 +50,12 @@ if (mysqli_num_rows($query_get_fund) > 0) {
   $progress_difference = round($diff_per);
 
 ?>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
 <!-- Container-fluid starts-->
 <div class="page-body">
     <!-- <div class="container-fluid">
@@ -81,7 +87,51 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                   <div class="card">
                     <div class="card-body">
                       <div class="product-slider owl-carousel owl-theme" id="sync1">
-                      <div class="text-center"><img class="img-fluid" src="<?php echo $row["image_base64"]; ?>" alt=""></div>
+                      <div class="text-center">
+                        <!-- <img class="img-fluid"alt=""> -->
+                        <div class="w3-container">
+                      </div>
+
+                      <div class="w3-content" style="max-width:1200px">
+                        <img class="mySlides" src="<?php echo $row["image_base64"] ?>" style="width:100%;display:none">
+                        <img class="mySlides" src="<?php echo $row["middle_image"] ?>"  style="width:100%">
+                        <img class="mySlides" src="<?php echo $row["last_image"] ?>"  style="width:100%;display:none">
+
+                        <div class="w3-row-padding w3-section">
+                          <div class="w3-col s4">
+                            <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo $row["image_base64"] ?>" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+                          </div>
+                          <div class="w3-col s4">
+                            <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo $row["middle_image"] ?>" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+                          </div>
+                          <div class="w3-col s4">
+                            <img class="demo w3-opacity w3-hover-opacity-off" src="<?php echo $row["last_image"] ?>" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+                          </div>
+                        </div>
+                      </div>
+
+                      <script>
+                      function currentDiv(n) {
+                        showDivs(slideIndex = n);
+                      }
+
+                      function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("demo");
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                          x[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                        }
+                        x[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " w3-opacity-off";
+                      }
+                      </script>
+                      </div>
                         <!-- <div class="item"><img src="../assets/images/ecommerce/01.jpg" height="500px" width="500px" alt=""></div> -->
                       </div>
                       <!-- <div class="owl-carousel owl-theme" id="sync2">
@@ -282,7 +332,7 @@ function payWithPaystack() {
 
   /* Alert the copied text */
   var publick = document.getElementById('public-link').value;
-  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://growfund.com.ng/core/fund.php?public-link='+publick;
+  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://aidamigo.com/fund.php?public-link='+publick;
 
   // SWEET ALERT SUCCESS
   swal.fire({

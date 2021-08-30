@@ -76,6 +76,7 @@ include('nav.php');
 
               // GET ACCOUNT DETAIL
               $gau = mysqli_fetch_array($query_check_account);
+              $bank_id = $gau["id"];
               $bank_code = $gau["bank_code"];
               $bank_name = $gau["bank_name"];
               $account_number = $gau["account_number"];
@@ -101,7 +102,7 @@ include('nav.php');
                   <div class="card-body">
                     <div class="row">
                       <div class="col-md-7">
-                        <form class="theme-form mega-form">
+                        <form class="theme-form mega-form" method="POST" action="../functions/fund/CollectFund.php">
                         <div class="mb-3">
                         <input class="form-control" type="text" style="text-transform: uppercase;" readonly value="<?php echo $account_name; ?>">
                           </div>
@@ -118,13 +119,58 @@ include('nav.php');
                           <br>
                           <?php 
                           if (isset($_GET["public-link"])) {
-                          ?>
-                          <div class="mb-3">
-                          <input class="form-control" style="text-transform: uppercase;" type="text" readonly placeholder="$30,000">
+                            // get the amount & set the pass
+                            $public_link_id = $_GET["public-link"];
+                            $query_verify = mysqli_query($connection, "SELECT * FROM `fund_raise` WHERE public_link = '$public_link_id' AND is_withdrawn = '0' && is_active = '1'");
+                            $plw = mysqli_fetch_array($query_verify);
+                            
+                            if (mysqli_num_rows($query_verify) > 0 && mysqli_num_rows($query_verify) < 2) {
+                              // check if the fund is 40% or more 
+                              // check if the withdrawal fund account is verified else he/she cant withdraw
+                              $goal_amount = $plw["goal_amount"];
+                              $amount_raised = $plw["amount_raised"];
+                              $percentage_margin = ($amount_raised / $goal_amount) * 100;
+                              if ($percentage_margin > 40) {
+                                $check_verified_identity = mysqli_query($connection, "SELECT `is_verified` FROM `users` WHERE id = '$user_id' && is_verified = '1'");
+                                if (mysqli_num_rows($check_verified_identity) > 0) {
+                                  ?>
+                                  <div class="mb-3">
+                                  NGN
+                          <input class="form-control" name="amount" style="text-transform: uppercase;" type="text" value="<?php echo $plw["amount_raised"]; ?>" readonly placeholder=" <?php echo $plw["amount_raised"]; ?>">
+                          <input class="form-control" name="public_link" hidden type="text" readonly value="<?php echo $_GET["public-link"] ?>">
                           </div>
                           <div class="mb-3">
                               <button type="submit" class="btn btn-pill btn-success btn-air-success">Request Withdrawal</button>
                           </div>
+                                  <?php
+                                } else {
+                                  ?>
+                            <div class="mb-3">
+                              <button type="submit" disabled class="btn btn-pill btn-danger btn-air-danger">PLEASE VERIFY YOUR IDENTITY IN THE SETTINGS</button>
+                          </div>
+                                  <?php
+                                }
+                              ?>
+                              
+                              <?php
+                              } else {
+                                ?>
+                                  <div class="mb-3">
+                              <button type="submit" disabled class="btn btn-pill btn-danger btn-air-danger">YOU NEED TO RAISE 40% BEFORE YOU REQUEST WITHDRAWAL</button>
+                          </div>
+                                <?php
+                              }
+                            } else {
+                              ?>
+                              <div class="mb-3">
+                          </div>
+                          <div class="mb-3">
+                              <button type="submit" disabled class="btn btn-pill btn-danger btn-air-danger">THIS WITHDRAWAL WAS PROCESSED OR FUND RAISE NOT ACTIVE</button>
+                          </div>
+                              <?php
+                            }
+                          ?>
+                          
                           <?php
                           }
                           ?>
@@ -150,9 +196,98 @@ include('nav.php');
                   
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-md-7">
-                      </div>
+                      <div class="col-sm-12">
+                <div class="card">
+                  <span>All Withdrawal Transactions for Fund Raised below.</span>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="display" id="basic-1">
+                        
+                        <thead>
+                          <tr>
+                            <th>Transaction ID</th>
+                            <th></th>
+                            <th></th>
+                            <th>Amount</th>
+                            <th></th>
+                            <th></th>
+                            <th>Date</th>
+                            <th></th>
+                            <th></th>
+                            <th>Status</th>
+                            <th></th>
+                            <th></th>
+                            <th>Bank</th>
+                            <th></th>
+                            <th></th>
+                            <th>Account Number</th>
+                            <th></th>
+                            <th></th>
+                            <th>Account Name</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php 
+                        $query_check_transaction = mysqli_query($connection, "SELECT * FROM `bank_account_transaction` WHERE bank_id = '$bank_id' ORDER BY id DESC");
+                        if (mysqli_num_rows($query_check_transaction) > 0) {
+                          while ($gtg = mysqli_fetch_array($query_check_transaction)) {
+                        ?>
+                          <tr>
+                            <td><?php echo $gtg["transaction_id"] ?></td>
+                            <td></td>
+                            <td></td>
+                            <td>NGN <?php echo number_format($gtg["amount"],2) ?></td>
+                            <td></td>
+                            <td></td>
+                            <td><?php echo  $gtg["date"] ?></td>
+                            <td></td>
+                            <td></td>
+                            <td><?php echo $gtg["description"] ?></td>
+                            <td></td>
+                            <td></td>
+                            <td><?php echo $bank_name;?></td>
+                            <td></td>
+                            <td></td>
+                            <td><?php echo $account_number;?></td>
+                            <td></td>
+                            <td></td>
+                            <td><?php echo $account_name; ?></td>
+                          </tr>
+                          <?php
+                          }
+                        }
+                        else {
+                          ?>
+                          <tr>
+                            <td>--</td>
+                            <td></td>
+                            <td></td>
+                            <td>NGN --</td>
+                            <td></td>
+                            <td></td>
+                            <td>--</td>
+                            <td></td>
+                            <td></td>
+                            <td>--</td>
+                            <td></td>
+                            <td></td>
+                            <td>--</td>
+                            <td></td>
+                            <td></td>
+                            <td>--</td>
+                            <td></td>
+                            <td></td>
+                            <td>--</td>
+                          </tr>
+                          <?php
+                        } 
+                          ?>
+                        </tbody>
+                      </table>
                     </div>
+                  </div>
+                </div>
+              </div>
                   </div>
 
                   <!-- When sharing -->

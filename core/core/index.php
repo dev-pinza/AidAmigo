@@ -144,7 +144,7 @@ include('nav.php');
                         <div class="customers mt-4">
                             <center>
                         <a class="btn btn-pill btn-success btn-air-success" type="button" title="Withdraw the FundRaised" href="collect-fund.php?public-link=<?php echo $public_link; ?>">Collect Fund</a>
-                        <a class="btn btn-pill btn-warning btn-air-warning" href="fund.php?public-link=<?php echo $public_link; ?>" type="button" title="View">View</a>
+                        <a class="btn btn-pill btn-warning btn-air-warning" href="../../fund.php?public-link=<?php echo $public_link; ?>" type="button" title="View">View</a>
                         <a class="btn btn-pill btn-light btn-air-light" type="button" onclick="myFunction()">Share Link</a>
                         <input class="form-control" id="copy-header" hidden value="<?php echo $row["campaign_title"]; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
                         <input class="form-control" id="public-link" hidden value="<?php echo $public_link; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
@@ -166,7 +166,7 @@ include('nav.php');
 
   /* Alert the copied text */
   var publick = document.getElementById('public-link').value;
-  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://aidamigo.com/core/core/fund.php?public-link='+publick;
+  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://aidamigo.com/fund.php?public-link='+publick;
 
   // SWEET ALERT SUCCESS
   swal.fire({

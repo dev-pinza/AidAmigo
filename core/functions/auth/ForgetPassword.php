@@ -18,7 +18,7 @@ if (isset($_POST["email"])) {
 
     if (mysqli_num_rows($query_user_email) > 0) {
         // Name of User
-        $fu = mysqli_fetch_array($query_update_code);
+        $fu = mysqli_fetch_array($query_user_email);
         $first_name = $fu["first_name"];
         // Random Number
         $digits = 6;
