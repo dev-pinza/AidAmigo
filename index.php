@@ -517,13 +517,13 @@ include("core/functions/db/connect.php");
 										<!-- HTML CONTENT HERE -->
 										<center>
 										<div class="project-box">
-											<h6>Start A GrowFund</h6>
+											<h6>Start A Fund Raise Campaign</h6>
 											<div class="media">
 											</div>
 											<p>CLICK BELOW TO GET STARTED</p>
 											<!-- Action button -->
 											<div class="customers mt-4">
-											<a class="btn btn-pill btn-success btn-air-success" href="signup.php" type="button">Create FundRaise</a>
+											<a class="btn btn-pill btn-success btn-air-success" href="core/signup.php" type="button">Create FundRaise</a>
 											</div>
 										</div>
 										</center>
