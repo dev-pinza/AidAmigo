@@ -5,6 +5,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
 
     $reference = $_GET["reference"];
     $public_link = $_GET["publiclink"];
+    $fullname = $_GET["fullname"];
 
     $curl = curl_init();
   
@@ -55,7 +56,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
     $cust_fd = $md["custom_fields"];
     $cdatas = json_encode($cust_fd);
     $cf = json_decode($cdatas, TRUE);
-    $fullname = $cf["fullname"];
+    // $fullname = $cf["fullname"];
     $date = date('Y-m-d H:i:s');
 
     // CHECK DATABASE

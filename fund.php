@@ -281,6 +281,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
 <script src="https://js.paystack.co/v1/inline.js"></script> 
 <script>
 var paymentForm = document.getElementById('paymentForm');
+var fullname_m = document.getElementById('fullname').value;
 paymentForm.addEventListener('submit', payWithPaystack, false);
 function payWithPaystack() {
   var handler = PaystackPop.setup({
@@ -302,7 +303,7 @@ function payWithPaystack() {
       var publick = document.getElementById('public-link').value;
       // Make an AJAX call to your server with the reference to verify the transaction
       $.ajax({
-        url: 'core/core/ajax_post/paystack/VerifyTransaction.php?reference='+ response.reference + '&publiclink='+ publick,
+        url: 'core/core/ajax_post/paystack/VerifyTransaction.php?reference='+ response.reference + '&publiclink='+ publick + '&fullname=' + fullname_m,
         method: 'GET',
         success: function (response) {
           // the transaction status is in response.data.status
