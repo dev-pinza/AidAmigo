@@ -90,7 +90,7 @@ include("core/functions/db/connect.php");
 								<li><a href="https://join.slack.com/t/newworkspace-hfu7728/shared_invite/zt-uuvk4o1z-eEHy6olgohmLV28shkBPiA"><span>Join Us on Slack</span></a></li>
 								<!-- <li><a href="causes_2.html"> <span>Causes 2</span></a></li>
 								<li><a href="causes_3.html"><span>Causes 3</span></a></li>
-								<li><a href="cause-details.html"><span>Cause Details</span></a></li> -->
+								<li><a href="javascript:void(0);"><span>Cause Details</span></a></li> -->
 							</ul>
 							<!-- sub menu end-->
 						</li>
@@ -179,7 +179,7 @@ include("core/functions/db/connect.php");
 											<li><a href="https://join.slack.com/t/newworkspace-hfu7728/shared_invite/zt-uuvk4o1z-eEHy6olgohmLV28shkBPiA"><span>Join Us on Slack</span></a></li>
 											<!-- <li><a href="causes_2.html"> <span>Causes 2</span></a></li>
 											<li><a href="causes_3.html"><span>Causes 3</span></a></li>
-											<li><a href="cause-details.html"><span>Cause Details</span></a></li> -->
+											<li><a href="javascript:void(0);"><span>Cause Details</span></a></li> -->
 										</ul>
 										<!-- sub menu end-->
 									</li>
@@ -535,7 +535,7 @@ include("core/functions/db/connect.php");
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html">Health in other Countries</a></h6>
+												<h6 class="causes-item__title"> <a href="javascript:void(0);">Health in other Countries</a></h6>
 												<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
 											</div>
 											<div class="causes-item__img">
@@ -559,7 +559,7 @@ include("core/functions/db/connect.php");
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
 											<div class="causes-item__top">
-												<h6 class="causes-item__title"> <a href="cause-details.html">We Build and Create</a></h6>
+												<h6 class="causes-item__title"> <a href="javascript:void(0);">We Build and Create</a></h6>
 												<p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
 											</div>
 											<div class="causes-item__img">
@@ -601,7 +601,7 @@ include("core/functions/db/connect.php");
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="img"/></div>
 							<div class="projects-masonry__text" style="background-color: #2EC774;">
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #49C2DF;">Water Delivery</span>
-									<h3 class="projects-masonry__title"> <a href="cause-details.html">More than One Life Can be Changed</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">More than One Life Can be Changed</a></h3>
 									<p>We mapping out areas that lack water in Nigeria, Ghana & Kenya. we will raise a fund to accomplish this cause </p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 20,000,000.00</span></div>
@@ -614,7 +614,7 @@ include("core/functions/db/connect.php");
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="img"/></div>
 							<div class="projects-masonry__text" style="background-color: #9BC35E;">
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #F36F8F;">Medicine</span>
-									<h3 class="projects-masonry__title"> <a href="cause-details.html">Aid Amigo</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Aid Amigo</a></h3>
 									<p>Launching a Med Fair, Raising funds to provied free medical care for 3 months in different states in Nigeria</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 15,000,000.00</span></div>
@@ -626,7 +626,7 @@ include("core/functions/db/connect.php");
 						<div class="col-lg-6 col-xl-8 projects-masonry__item projects-masonry__item--height-1 projects-masonry__item--primary">
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1589010588553-46e8e7c21788?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2027&q=80" alt="img"/>
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #F8AC3A;">Food</span>
-									<h3 class="projects-masonry__title"> <a href="cause-details.html">Help for Children of the East</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Help for Children of the East</a></h3>
 									<p>Raising funds to Help children in the East have food to Eat</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 10,000,000.00</span></div>
@@ -638,7 +638,7 @@ include("core/functions/db/connect.php");
 						<div class="col-lg-6 col-xl-4 projects-masonry__item projects-masonry__item--height-2 projects-masonry__item--primary">
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1581078426770-6d336e5de7bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="img"/>
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #2EC774;">Education</span>
-									<h3 class="projects-masonry__title"> <a href="cause-details.html">Quality Education for the Poor</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Quality Education for the Poor</a></h3>
 									<p>We are raising funds for children above 5 and below 18 whose parent cant afford quality education, we will sponsort this kids with the fund raised so far.</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 200,000,000.00</span></div>
@@ -651,7 +651,7 @@ include("core/functions/db/connect.php");
 							<div class="projects-masonry__img"><img class="img--bg" src="assets/img/projects_5.jpg" alt="img"/></div>
 							<div class="projects-masonry__text" style="background-color: #E78F51;">
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #2EC774;">Education</span>
-									<h3 class="projects-masonry__title"> <a href="cause-details.html">Help for Children of the East</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Help for Children of the East</a></h3>
 									<p>Murray cod clownfish American sole rockfish dojo loach gulper, trout-perch footballfish, pelican eel. Spinefoot coelacanth eagle ray </p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>25 000$</span></div>
@@ -663,7 +663,7 @@ include("core/functions/db/connect.php");
 						<!-- <div class="col-lg-6 col-xl-4 projects-masonry__item projects-masonry__item--height-2 projects-masonry__item--primary">
 							<div class="projects-masonry__img"><img class="img--bg" src="assets/img/projects_6.jpg" alt="img"/>
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #F36F8F;">Medicine</span>
-									<h3 class="projects-masonry__title"> <a href="cause-details.html">Helpo for Help</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Helpo for Help</a></h3>
 									<p>Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>25 000$</span></div>
