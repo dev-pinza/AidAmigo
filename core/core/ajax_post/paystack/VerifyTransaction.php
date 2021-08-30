@@ -59,7 +59,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
     $date = date('Y-m-d H:i:s');
 
     // ECHO everything
-    echo $fund_id + $amount + $balance_raised + $reference + $payment_status + $customer_code + $email + $fullname + $data_id + $date;
+    
 
     // CHECK DATABASE
     $query_data = mysqli_query($connection, "SELECT * FROM `fund_raise_transaction` WHERE transaction_id = '$reference'");
@@ -90,6 +90,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
                     $query_fund_trans = mysqli_query($connection, "SELECT * FROM `fund_raise_transaction` WHERE transaction_id = '$reference'");
 
                     if (mysqli_num_rows($query_fund_trans) <= 0) {
+                        echo 'ID:'.$fund_id.'AMOUNT:'.$amount.'BALANCE'.$balance_raised.'REF:'.$reference.'PAYMENT:'.$payment_status.'CUST:'.$customer_code.'EMAIL:'.$email.'FULLNAME'.$fullname.'DATE:'.$data_id.'DATE:'.$date;
                         $query_insert_trans = mysqli_query($connection, "INSERT INTO `fund_raise_transaction` (`fund_id`, `amount`, `fund_balance`, `transaction_id`, `status`, `description`, `email`, `fullname`, `address`, `date`) VALUES ('{$fund_id}', '{$amount}', '{$balance_raised}', '{$reference}', '{$payment_status}', '{$customer_code}', '{$email}', '{$fullname}', '{$data_id}', '{$date}')");
 
                         if ($query_insert_trans) {
