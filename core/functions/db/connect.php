@@ -7,8 +7,8 @@
 // define('DB_NAME', 'growfund');
 // LIVE
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_USERNAME', 'aidannxv_core');
+define('DB_PASSWORD', 'w&nQ1_*,*j#.');
 define('DB_CHARSET', 'utf8');
 define('DB_NAME', 'aidamigo');
 
