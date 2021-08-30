@@ -59,7 +59,7 @@ if (isset($_GET["reference"]) && isset($_GET["publiclink"]) && $_GET["reference"
     $date = date('Y-m-d H:i:s');
 
     // ECHO everything
-    echo {$fund_id}' + '{$amount}' + '{$balance_raised}' + '{$reference}' + '{$payment_status}' + '{$customer_code}' + '{$email}' + '{$fullname}' + '{$data_id}' + '{$date};
+    echo $fund_id + $amount + $balance_raised + $reference + $payment_status + $customer_code + $email + $fullname + $data_id + $date;
 
     // CHECK DATABASE
     $query_data = mysqli_query($connection, "SELECT * FROM `fund_raise_transaction` WHERE transaction_id = '$reference'");
