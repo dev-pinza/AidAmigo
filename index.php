@@ -98,8 +98,8 @@ include("core/functions/db/connect.php");
 						<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Account</span></a>
 							<!-- sub menu start-->
 							<ul class="aside-menu__sub-list">
-								<li><a href="core/login.php"><span>Login</span></a></li>
-								<li><a href="core/signup.php"><span>Register</span></a></li>
+								<li><a href="https://aidamigo.com/core/login.php"><span>Login</span></a></li>
+								<li><a href="https://aidamigo.com/core/signup.php"><span>Register</span></a></li>
 							</ul>
 							<!-- sub menu end-->
 						</li>
@@ -187,8 +187,8 @@ include("core/functions/db/connect.php");
 									<li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link" href="javascript:void(0);"><span>User Account</span></a>
 										<!-- sub menu start-->
 										<ul class="main-menu__sub-list">
-											<li><a href="core/login.php"><span>Login</span></a></li>
-											<li><a href="core/signup.php"><span>Register</span></a></li>
+											<li><a href="https://aidamigo.com/core/login.php"><span>Login</span></a></li>
+											<li><a href="https://aidamigo.com/core/signup.php"><span>Register</span></a></li>
 											<!-- <li><a href="testimonials.html"><span>Testimonials</span></a></li>
 											<li><a href="accordion.html"><span>Accordion</span></a></li>
 											<li><a href="tabs.html"><span>Tabs</span></a></li>
@@ -266,7 +266,7 @@ include("core/functions/db/connect.php");
 												<div class="promo-slider__wrapper-2">
 													<p class="promo-slider__subtitle">You can also Aid Amigo by helping them raise funds for a cause, click button below to get started</p>
 												</div>
-												<div class="promo-slider__wrapper-3"><a class="button promo-slider__button button--primary" href="core/signup.php">Get Started</a></div>
+												<div class="promo-slider__wrapper-3"><a class="button promo-slider__button button--primary" href="https://aidamigo.com/core/signup.php">Get Started</a></div>
 											</div>
 										</div>
 									</div>
@@ -289,7 +289,7 @@ include("core/functions/db/connect.php");
 												<div class="promo-slider__wrapper-2">
 													<p class="promo-slider__subtitle">Raise Fund for your school, business & many more! </p>
 												</div>
-												<div class="promo-slider__wrapper-3"><a class="button promo-slider__button button--primary" href="core/signup.php">Discover</a></div>
+												<div class="promo-slider__wrapper-3"><a class="button promo-slider__button button--primary" href="https://aidamigo.com/core/signup.php">Discover</a></div>
 											</div>
 										</div>
 									</div>
@@ -973,7 +973,7 @@ include("core/functions/db/connect.php");
 									<li class="footer-menu__item"><a class="footer-menu__link" href="contacts.php">Contacts</a></li>
 									<!-- <li class="footer-menu__item"><a class="footer-menu__link" href="#">Pages</a></li> -->
 									<!-- <li class="footer-menu__item"><a class="footer-menu__link" href="#">Elements</a></li> -->
-									<li class="footer-menu__item"><a class="footer-menu__link" href="core/login.php">Login</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="https://aidamigo.com/core/login.php">Login</a></li>
 								</ul>
 							</nav>
 							<!-- footer nav end-->
