@@ -10,7 +10,7 @@ include("core/functions/db/connect.php");
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<link rel="shortcut icon" href="assets/img/logo/AIDAMIGO_SVG.svg"/>
-		<title>Aid Amigo - #1 Fundraising Company</title>
+		<title>Aid Amigo - #1 Fundraising (<?php echo $web_title; ?>)</title>
 		<!-- styles-->
 		<link rel="stylesheet" href="assets/css/styles.min.css"/>
 		<!-- web-font loader-->
@@ -53,7 +53,7 @@ include("core/functions/db/connect.php");
 					</svg></span>
 				<div class="aside-dropdown__item d-lg-none d-block">
 					<ul class="aside-menu">
-						<li class="aside-menu__item aside-menu__item--has-child aside-menu__item--active"><a class="aside-menu__link" href="index.php"><span>Home</span></a>
+						<li class="aside-menu__item aside-menu__item--has-child <?php echo $page_def; ?>"><a class="aside-menu__link" href="index.php"><span>Home</span></a>
 							<!-- sub menu start-->
 							<ul class="aside-menu__sub-list">
 								<li class="item--active"><a href="index.php"><span>View</span></a></li>
@@ -65,10 +65,10 @@ include("core/functions/db/connect.php");
 							</ul>
 							<!-- sub menu end-->
 						</li>
-						<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>About</span></a>
+						<li class="aside-menu__item aside-menu__item--has-child <?php echo $page_def_about; ?>"><a class="aside-menu__link" href="javascript:void(0);"><span>About</span></a>
 							<!-- sub menu start-->
 							<ul class="aside-menu__sub-list">
-								<li><a href="about-us.php"><span>Aid Amigo</span></a></li>
+								<li><a class="item--active" href="about-us.php"><span>Aid Amigo</span></a></li>
 								<li><a href="about-us.php#team"> <span>Team Members</span></a></li>
 								<!-- <li><a href="donors.html"><span>Donors & Partners</span></a></li>
 								<li><a href="volunteer.html"><span>Become a Volunteer</span></a></li>
@@ -95,7 +95,7 @@ include("core/functions/db/connect.php");
 							</ul>
 							<!-- sub menu end-->
 						</li>
-						<li class="aside-menu__item"><a class="aside-menu__link" href="contacts.php"><span>Contacts</span></a></li>
+						<li class="aside-menu__item <?php echo $page_def_contact; ?>"><a class="aside-menu__link" href="contacts.php"><span>Contacts</span></a></li>
 						<li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link" href="javascript:void(0);"><span>Account</span></a>
 							<!-- sub menu start-->
 							<ul class="aside-menu__sub-list">
@@ -135,7 +135,7 @@ include("core/functions/db/connect.php");
 							<div class="dropdown-trigger d-none d-sm-block">
 								<div class="dropdown-trigger__item"></div>
 							</div>
-							<div class="header-logo"><a class="header-logo__link" href="#"><img class="header-logo__img logo--light" src="assets/img/logo/AIDAMIGO_SVG_DARKMOOD.svg" alt="logo"/><img class="header-logo__img logo--dark" src="assets/img/logo/AIDAMIGO_SVG_DARKMOOD.svg" alt="logo"/></a></div>
+							<div class="header-logo"><a class="header-logo__link" href="#"><img class="header-logo__img logo--light" src="assets/img/logo/AIDAMIGO_SVG_DARKMOOD.svg" alt="logo"/><img class="header-logo__img logo--dark" src="assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" alt="logo"/></a></div>
 						</div>
 						<div class="col-auto">
 							<!-- main menu start-->

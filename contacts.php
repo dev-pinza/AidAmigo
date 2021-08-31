@@ -1,4 +1,8 @@
 <?php
+$web_title = "Contact Us";
+$page_def = "";
+$page_def_about = "";
+$page_def_contact = "aside-menu__item--active";
 include('header.php');
 ?>
 <!-- header end-->

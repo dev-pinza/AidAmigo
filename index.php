@@ -1,4 +1,8 @@
 <?php
+$web_title = "Welcome";
+$page_def = "aside-menu__item--active";
+$page_def_about = "";
+$page_def_contact = "";
 include('header.php');
 ?>
 	
@@ -220,9 +224,9 @@ include('header.php');
 									<div class="col-6">
 										<div class="counter-item counter-item--style-3">
 											<div class="counter-item__top">
-												<h6 class="counter-item__title">Naira We Collected</h6>
+												<h6 class="counter-item__title">Funds Collected</h6>
 											</div>
-											<div class="counter-item__lower"><span class="js-counter">20</span><span>mil</span></div>
+											<div class="counter-item__lower">₦<span class="js-counter">20</span><span>M</span></div>
 										</div>
 									</div>
 								</div>
