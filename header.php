@@ -13,6 +13,7 @@ include("core/functions/db/connect.php");
 		<title>Aid Amigo - #1 Fundraising (<?php echo $web_title; ?>)</title>
 		<!-- styles-->
 		<link rel="stylesheet" href="assets/css/styles.min.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 		<!-- web-font loader-->
 		<script>
 			WebFontConfig = {
@@ -43,7 +44,26 @@ include("core/functions/db/connect.php");
 		</script>
 	</head>
 
-    <body>
+    <body onload="loadfun()">
+    <div id="loading">
+        <div class="bgr">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </div>
+    </div>
+<script>
+    var load = document.getElementById("loading");
+    function loadfun () {
+        load.style.display = 'none';
+    }
+</script>
+<!-- scritpt -->
+    </div>
 		<div class="page-wrapper">
 			<!-- aside dropdown start-->
 			<div class="aside-dropdown">
