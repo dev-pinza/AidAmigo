@@ -44,24 +44,7 @@ include("core/functions/db/connect.php");
 		</script>
 	</head>
 
-    <body onload="loadfun()">
-    <div id="loading">
-        <div class="bgr">
-    <div class="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    </div>
-    </div>
-<script>
-    var load = document.getElementById("loading");
-    function loadfun () {
-        load.style.display = 'none';
-    }
-</script>
+    <body>
 <!-- scritpt -->
     </div>
 		<div class="page-wrapper">
