@@ -207,7 +207,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                             <div class="media"><i data-feather="clock"></i>
                               <div class="media-body">
                                 <h5><?php echo $rowx["fullname"]; ?>                                  </h5>
-                                <p>₦ <?php echo number_format($rowx["amount"]); ?></p>
+                                <p>₦ <?php echo number_format($rowx["amount"], 2); ?></p>
                               </div>
                             </div>
                           </li>

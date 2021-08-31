@@ -274,10 +274,10 @@ include('header.php');
 										<div class="causes-item__body">
 											<div class="causes-item__top">
 												<h6 class="causes-item__title"> <a href="fund.php?public-link=<?php echo $public_link; ?>"><?php echo $row["campaign_title"]; ?></a></h6>
-												<p><?php echo  substr($row["story_body"], -40).' ..read more'; ?></p>
+												<p><?php echo  substr($row["story_body"], -40).' ...'; ?> <a href="fund.php?public-link=<?php echo $public_link; ?>">read more</a></p>
 											</div>
 											<div class="causes-item__img">
-												<div class="causes-item__badge" style="background-color: #49C2DF"><?php echo $row["category"] ?></div><img class="img--bg" src="<?php echo $row["image_base64"]; ?>" alt="img"/>
+												<div class="causes-item__badge" style="background-color: #49C2DF"><?php echo $row["category"]; ?></div><img class="img--bg" src="<?php echo $row["image_base64"]; ?>" alt="img"/>
 											</div>
 											<div class="causes-item__lower">
 												<div class="progress-bar">
