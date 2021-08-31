@@ -133,6 +133,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="col-md-7">
             <div class="card-body">
               <?php
+              $account = "";
               if (isset($_GET["return_message"])) {
                 $account = "Account created successfully";
               }
