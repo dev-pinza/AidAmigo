@@ -25,16 +25,16 @@ include('core/functions/db/connect.php');
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/icofont.css">
     <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/themify.css">
+    <!-- <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/themify.css"> -->
     <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/flag-icon.css">
+    <!-- <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/flag-icon.css"> -->
     <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/feather-icon.css">
+    <!-- <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/feather-icon.css"> -->
     <!-- Plugins css start-->
-    <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/scrollbar.css">
+    <!-- <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/scrollbar.css"> -->
     <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/animate.css">
     <!-- <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/dropzone.css"> -->
-    <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/date-picker.css">
+    <!-- <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/date-picker.css"> -->
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="core/assets/css/vendors/bootstrap.css">
@@ -74,6 +74,6 @@ include('core/functions/db/connect.php');
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-sidebar compact-small material-icon" id="pageWrapper">
       <!-- Page Header Start-->
- 
+
       <!-- Page Header Ends  -->
       <!-- <div class="page-body-wrapper default-menu default-menu"> -->
