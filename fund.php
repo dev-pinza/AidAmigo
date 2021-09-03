@@ -1,5 +1,5 @@
 <?php
-$web_title = "#1 Investment & FundRaising";
+$web_title = "#1 FundRaising";
 include('headerf.php');
 
 if (isset($_GET["public-link"]) && $_GET["public-link"] != "") {
@@ -30,7 +30,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
       $badge_name = "Done";
       $progress_bar_type = "";
   }
-  
+
   // summary of transaction
   $query_total_paid = mysqli_query($connection, "SELECT COUNT(fund_id) AS fund_id_all  FROM `fund_raise_transaction` WHERE fund_id	= '$fund_id'");
   // summary of today transaction
@@ -43,7 +43,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
   $total_today = $qtt["fund_id_today"];
 
   // while loop of entities LIMIT 5
-  
+
   // progress bar amount computation
   $diff_per = ($amount_raised / $goal_amount) * 100;
   // round up
@@ -151,7 +151,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                       <p><?php echo $row["category"].' - Due Date '.$row["due_date"]; ?></p>
                       <hr>
                       <p><?php echo $row["story_body"]; ?></p>
-                      
+
                       <hr>
                       <div class="m-t-15">
                         <button class="btn btn-success m-r-10" type="button" title="" data-bs-toggle="modal" data-bs-target="#myModal"> <i class="fa fa-shopping-basket me-1"></i>Donate Now</button><button class="btn btn-secondary" onclick="myFunction()"> <i class="fa fa-heart me-1"></i>Share Now</button>
@@ -211,10 +211,10 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                               </div>
                             </div>
                           </li>
-                          <?php 
+                          <?php
                         }
                             ?>
-                          
+
                         </ul>
                       </div>
                     </div>
@@ -262,13 +262,13 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                                           <div class="mb-3">
                                           <?php
                                             $digitx = 7;
-                                            $rand_email = str_pad(rand(0, pow(10, $digitx)-1), $digitx, '0', STR_PAD_LEFT); 
+                                            $rand_email = str_pad(rand(0, pow(10, $digitx)-1), $digitx, '0', STR_PAD_LEFT);
                                             ?>
                                           <label class="form-label" for="validationCustomUsername">E-mail (edit to display email)</label>
                                             <input class="form-control" id="email-address" type="email" value="<?php echo $rand_email."@nomail.com"; ?>" placeholder="person@example.com" aria-describedby="inputGroupPrepend" required="">
                                             <?php
                                             $digits = 12;
-                                            $activation_code = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT); 
+                                            $activation_code = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
                                             ?>
                                             <input class="form-control" id="reference-id" hidden value="<?php echo $activation_code; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
                                             <input class="form-control" id="public-link" hidden value="<?php echo $public_link; ?>" type="text" aria-describedby="inputGroupPrepend" required="">
@@ -278,7 +278,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                                               <a onclick="payWithPaystack()" class="btn btn-pill btn-success btn-air-success">Proceed</a>
                                           </div>
                                           </form>
-<script src="https://js.paystack.co/v1/inline.js"></script> 
+<script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
 var paymentForm = document.getElementById('paymentForm');
 paymentForm.addEventListener('submit', payWithPaystack, false);
@@ -360,7 +360,7 @@ function payWithPaystack() {
           </div>
           <!-- Container-fluid Ends-->
         </div>
-        
+
 <?php
 include('footerf.php');
 ?>

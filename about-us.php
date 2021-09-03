@@ -41,6 +41,10 @@ include('header.php');
 								<p><strong>Aid Amigo - Aid A Friend" we aid your fund rasing campaign get to it goal</strong></p>
 								<p>Fundraising for the people and causes you care about, raise money for events ranging from life events such as celebrations and graduations to challenging circumstances</p>
 								<p>Aid Amigo is a company that is almost close to non-profit, we care about your cause and we are ready to serve you to your goal</p>
+								<p>What you pay <b>"3% payment processing fee per transaction"</b> to payment service. This will be automatically deducted from every transaction</p>
+								<p> <strong> Aid Amigo Goal</strong> <br>
+										Eradicate extreme poverty and hunger, between 2020 and 2040, the proportion of people who suffer from hunger
+Undernutrition which includes fetal growth restriction, stunting, wasting and deficiencies of vitamin A and zinc, along with suboptimal breastfeeding; is the underlying cause of death in an estimated 45% of all deaths among children under 5 years of age. The proportion of underweight children in developing countries has declined from 28% to 17% between 1990 and 2013. This rate of progress is close to the rate required to meet the target, however improvements have been unevenly distributed between and within different regions.</p>
 							</div>
 						</div>
 					</div>

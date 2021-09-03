@@ -5,7 +5,7 @@ $page_def_about = "";
 $page_def_contact = "";
 include('header.php');
 ?>
-	
+
 			<main class="main">
 				<!-- promo start-->
 				<section class="promo">
@@ -122,7 +122,9 @@ include('header.php');
 								</div>
 								<p><strong>Aid Amigo - Aid A Friend" we aid your fund rasing campaign get to it goal</strong></p>
 								<p>Fundraising for the people and causes you care about, raise money for events ranging from life events such as celebrations and graduations to challenging circumstances</p>
-								<p>Aid Amigo is a company that is almost close to non-profit, we care about your cause and we are ready to serve you to your goal</p><a class="button button--primary" href="about.html">More About</a>
+								<p>Aid Amigo is a company that is almost close to non-profit, we care about your cause and we are ready to serve you to your goal.</p>
+								<p>What you pay <b>"3% payment processing fee per transaction"</b> to payment service.</p>
+								<a class="button button--primary" href="about.html">More About</a>
 							</div>
 							<div class="col-lg-6 col-xl-5 offset-xl-1">
 								<div class="info-box"><img class="img--layout" src="assets/img/about_layout.png" alt="img"/><img class="img--bg" src="https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1093&q=80" alt="img"/>
@@ -313,7 +315,7 @@ include('header.php');
 										 <?php
 											}
 										?>
-								
+
 								<!-- <div class="causes-slider__item">
 									<div class="causes-item causes-item--primary">
 										<div class="causes-item__body">
@@ -383,9 +385,10 @@ include('header.php');
 						<div class="col-lg-6 col-xl-4 projects-masonry__item projects-masonry__item--height-1 projects-masonry__item--vertical">
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="img"/></div>
 							<div class="projects-masonry__text" style="background-color: #2EC774;">
-								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #49C2DF;">Water Delivery</span>
-									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">More than One Life Can be Changed</a></h3>
-									<p>We mapping out areas that lack water in Nigeria, Ghana & Kenya. we will raise a fund to accomplish this cause </p>
+								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #49C2DF;">Sanitation</span>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Public Toilets</a></h3>
+									<p>The world has now met the MDG target relating to access to safe drinking-water. In 2012, 90% of the population used an improved source of drinking-water compared with 76% in 1990. Progress has however been uneven across different regions, between urban and rural areas, and between rich and poor. WHO
+										<br> we will raise a fund to accomplish this cause </p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 20,000,000.00</span></div>
 										<div class="projects-masonry__details-item"><span>Date: </span><span>23 Jan'24</span></div>
@@ -409,11 +412,11 @@ include('header.php');
 						<div class="col-lg-6 col-xl-8 projects-masonry__item projects-masonry__item--height-1 projects-masonry__item--primary">
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1589010588553-46e8e7c21788?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2027&q=80" alt="img"/>
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #F8AC3A;">Food</span>
-									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Help for Children of the East</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Help for Children of the Middle East</a></h3>
 									<p>Raising funds to Help children in the East have food to Eat</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 10,000,000.00</span></div>
-										<div class="projects-masonry__details-item"><span>Date: </span><span>17 Apr'24</span></div>
+										<div class="projects-masonry__details-item"><span>Date: </span><span>17 Apr 2024</span></div>
 									</div>
 								</div>
 							</div>
@@ -421,7 +424,7 @@ include('header.php');
 						<div class="col-lg-6 col-xl-4 projects-masonry__item projects-masonry__item--height-2 projects-masonry__item--primary">
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1581078426770-6d336e5de7bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="img"/>
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #2EC774;">Education</span>
-									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Quality Education for the Poor</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Quality Education for the Girl child</a></h3>
 									<p>We are raising funds for children above 5 and below 18 whose parent cant afford quality education, we will sponsort this kids with the fund raised so far.</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 200,000,000.00</span></div>
