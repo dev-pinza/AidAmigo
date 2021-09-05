@@ -252,7 +252,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                                           <div class="mb-3">
                                           <label class="form-label" for="validationCustomUsername">Amount</label>
                                           <div class="input-group"><span class="input-group-text" id="inputGroupPrepend">NGN</span>
-                                            <input class="form-control" id="amount" type="number" placeholder="30000" aria-describedby="inputGroupPrepend" required="">
+                                            <input class="form-control" id="amount" type="number" placeholder="Type Any Amount" aria-describedby="inputGroupPrepend" required="">
                                           </div>
                                           </div>
                                           <div class="mb-3">
