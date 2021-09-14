@@ -1,4 +1,5 @@
 <?php
+$web_title = "#1 FundRaising";
 include('header.php');
 ?>
 <!-- header end-->
@@ -54,7 +55,7 @@ include('header.php');
                                                 <!-- <div class="col-lg-4 margin-30">
 													<label class="form__label"><span class="form__icon">₦</span>
 														 <input style="color:grey;" class="form__field form__input-number" placeholder="Enter Amount" type="number"/>
-                                                     
+
                                                      <input style="margin-left: 50px; background-color:#ABABAB;color:black;"class="form__field" type="number" name="amount" placeholder="0.00"/>
 													</label>
                                                 </div> -->

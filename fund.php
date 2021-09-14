@@ -192,7 +192,7 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                         <li>
                             <div class="media"><i data-feather="credit-card"></i>
                               <div class="media-body">
-                                <h5>Online Payment                                  </h5>
+                                <h5>Online Payment</h5>
                                 <p>Card, Bank Transfer, QR, Bank Teller.                                   </p>
                               </div>
                             </div>

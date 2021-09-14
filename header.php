@@ -221,7 +221,7 @@ include("core/functions/db/connect.php");
 							<!-- lang select end-->
 							<div class="dropdown-trigger d-block d-sm-none">
 								<div class="dropdown-trigger__item"></div>
-							</div><a class="button button--squared" href="https://aidamigo.com/index.php#donatenow"><span>Donate Aid A Friend</span></a>
+							</div><a class="button button--squared" href="https://aidamigo.com/index.php#donatenow"><span> Aid A Friend</span></a>
 						</div>
 					</div>
 				</div>

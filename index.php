@@ -120,11 +120,11 @@ include('header.php');
 								<div class="heading heading--primary"><span class="heading__pre-title">About Us</span>
 									<h2 class="heading__title"><span>Aid Amigo</span> <span>Main Goal</span></h2>
 								</div>
-								<p><strong>Aid Amigo - Aid A Friend" we aid your fund rasing campaign get to it goal</strong></p>
-								<p>Fundraising for the people and causes you care about, raise money for events ranging from life events such as celebrations and graduations to challenging circumstances</p>
-								<p>Aid Amigo is a company that is almost close to non-profit, we care about your cause and we are ready to serve you to your goal.</p>
-								<p>What you pay <b>"3% payment processing fee per transaction"</b> to payment service.</p>
-								<a class="button button--primary" href="about.html">More About</a>
+								<p><strong>Aid Amigo - "Aid A Friend" we aid your fund rasing campaign get to it goal</strong></p>
+								<p>Fundraising for causes, programs and people you care about.</p>
+								<p>Rasing money for events and purposes ranging from celebrations and graduations to challenging situations</p>
+								<p>We charge an administrative fee and payment processing fee of <b>"3% to individuals"</b> note this fee is post paid.</p>
+								<a class="button button--primary" href="about-us.php">More About</a>
 							</div>
 							<div class="col-lg-6 col-xl-5 offset-xl-1">
 								<div class="info-box"><img class="img--layout" src="assets/img/about_layout.png" alt="img"/><img class="img--bg" src="https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1093&q=80" alt="img"/>
@@ -412,7 +412,7 @@ include('header.php');
 						<div class="col-lg-6 col-xl-8 projects-masonry__item projects-masonry__item--height-1 projects-masonry__item--primary">
 							<div class="projects-masonry__img"><img class="img--bg" src="https://images.unsplash.com/photo-1589010588553-46e8e7c21788?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2027&q=80" alt="img"/>
 								<div class="projects-masonry__inner"><span class="projects-masonry__badge" style="background: #F8AC3A;">Food</span>
-									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Help for Children of the Middle East</a></h3>
+									<h3 class="projects-masonry__title"> <a href="javascript:void(0);">Help Children Feed</a></h3>
 									<p>Raising funds to Help children in the East have food to Eat</p>
 									<div class="projects-masonry__details-holder">
 										<div class="projects-masonry__details-item"><span>Goal: </span><span>₦ 10,000,000.00</span></div>
