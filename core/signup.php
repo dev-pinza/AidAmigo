@@ -57,12 +57,12 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   <body>
     <!-- login page start-->
     <div class="container-fluid">
-      <div class="row">         
+      <div class="row">
         <div class="col-12 p-0">
           <div>
-            <div class="theme-form">     
-            <form method="POST" action="functions/auth/UserSignup.php" id="register_submit" enctype="multipart/form-data">                
-              <div class="wizard-4" id="wizard">                       
+            <div class="theme-form">
+            <form method="POST" action="functions/auth/UserSignup.php" id="register_submit" enctype="multipart/form-data">
+              <div class="wizard-4" id="wizard">
                 <ul>
                   <li><a class="logo text-start ps-0" href="index.php">
                     <img class="img-fluid for-light" src="../assets/img/logo/AIDAMIGO_SVG_BACKGROUNDLESS.svg" height="200px" width="200px" alt="looginpage">
@@ -81,13 +81,13 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                   <li class="pb-0"><a href="#step-4">
                       <h4>4</h4>
                       <h5> Done <i class="fa fa-thumbs-o-up"></i></h5><small>Complete.. !</small></a></li>
-                  <li>                          
+                  <li>
                        <!-- <img src="assets/images/login/icon.png" alt="looginpage"></li> -->
                 </ul>
                 <div id="step-1">
                   <div class="wizard-title">
                     <h2>Sign up to account</h2>
-                    <h5 class="text-muted mb-4">Please fill correctly for verification</h5>
+                    <h5 class="text-muted mb-4">fill correctly, <b> <a href="login.php">have an account? login</a></b></h5>
                   </div>
                   <div class="login-main">
                     <div class="theme-form">
@@ -168,7 +168,46 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                       </div>
                       <div class="form-group mb-3">
                         <label class="control-label">State</label>
-                        <input class="form-control mt-1" name="state" type="text" placeholder="State" required="required">
+                        <select class="form-control mt-1" name="state" required="required">
+                          <option value="ABUJA FCT">Select State</option>
+                          <option>ABUJA FCT</option>
+                          <option>ABIA</option>
+                          <option>ADAMAWA</option>
+                          <option>AKWA IBOM</option>
+                          <option>ANAMBRA</option>
+                          <option>BAUCHI</option>
+                          <option>BAYELSA</option>
+                          <option>BENUE</option>
+                          <option>BORNO</option>
+                          <option>CROSS RIVER</option>
+                          <option>DELTA</option>
+                          <option>EBONYI</option>
+                          <option>EDO</option>
+                          <option>EKITI</option>
+                          <option>ENUGU</option>
+                          <option>GOMBE</option>
+                          <option>IMO</option>
+                          <option>JIGAWA</option>
+                          <option>KADUNA</option>
+                          <option>KANO</option>
+                          <option>KATSINA</option>
+                          <option>KEBBI</option>
+                          <option>KOGI</option>
+                          <option>KWARA</option>
+                          <option>LAGOS</option>
+                          <option>NASSARAWA</option>
+                          <option>NIGER</option>
+                          <option>OGUN</option>
+                          <option>ONDO</option>
+                          <option>OSUN</option>
+                          <option>OYO</option>
+                          <option>PLATEAU</option>
+                          <option>RIVERS</option>
+                          <option>SOKOTO</option>
+                          <option>TARABA</option>
+                          <option>YOBE</option>
+                          <option>ZAMFARA</option>
+                        </select>
                       </div>
                       <div class="form-group mb-3">
                         <label class="control-label">Street/House Address</label>
