@@ -288,8 +288,8 @@ include('header.php');
 													</div>
 												</div>
 												<div class="causes-item__details-holder">
-													<div class="causes-item__details-item"><span>Goal: </span><span><?php echo number_format($goal_amount, 2); ?>₦</span></div>
-													<div class="causes-item__details-item text-right"><span>Pledged: </span><span><?php echo number_format($amount_raised, 2); ?>₦</span></div>
+													<div class="causes-item__details-item"><span>Goal: </span><span>₦ <?php echo number_format($goal_amount, 2); ?></span></div>
+													<div class="causes-item__details-item text-right"><span>Pledged: </span><span>₦ <?php echo number_format($amount_raised, 2); ?></span></div>
 												</div>
 											</div>
 										</div><a class="button causes-item__button button--primary" href="fund.php?public-link=<?php echo $public_link; ?>">+ Donate</a>
