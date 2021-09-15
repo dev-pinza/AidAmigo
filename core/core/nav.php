@@ -31,8 +31,11 @@
                   <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title link-nav" href="collect-fund.php"><i data-feather="thumbs-up"></i><span>Collect Fund</span></a>
                   </li>
+                  <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="https://aidamigo.com/index.php#donatenow"><i data-feather="credit-card"></i><span>Donate</span></a>
+                  </li>
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="settings.php"><i data-feather="settings"></i><span>Settings</span></a></li>
-                  
+
                 </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
