@@ -228,6 +228,11 @@ if (mysqli_num_rows($query_get_fund) > 0) {
             </div>
 
             <!-- MODAL -->
+            <?php 
+            // str_replace("data:image/PNG;base64,","", $row["image_base64"])
+             ?>
+            <input type="text" value="<?php echo $row["image_base64"]; ?>" hidden id="textimg">
+
             <!-- Modal-->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
@@ -277,7 +282,9 @@ if (mysqli_num_rows($query_get_fund) > 0) {
                                           <div class="mb-3">
                                               <a onclick="payWithPaystack()" class="btn btn-pill btn-success btn-air-success">Proceed</a>
                                           </div>
-                                          </form>
+                                          <!-- imput -->
+
+                                        </form>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
 var paymentForm = document.getElementById('paymentForm');
@@ -320,6 +327,7 @@ function payWithPaystack() {
 <script>
   // COPY OR SHARE JAVASCRIPT
   function myFunction() {
+  // alert('hi')
   /* Get the text field */
   var copyText = document.getElementById("copy-header");
 
@@ -332,16 +340,31 @@ function payWithPaystack() {
 
   /* Alert the copied text */
   var publick = document.getElementById('public-link').value;
-  var copied_value = copyText.value + '\n' + 'click below to donate!\n' + 'https://aidamigo.com/fund.php?public-link='+publick;
+  var copied_value = copyText.value + '\n' + 'click below to donate & share!\n' + 'https://aidamigo.com/fund.php?public-link='+publick;
 
+  var img = $('#textimg').val();
+  var a = document.createElement("a");
   // SWEET ALERT SUCCESS
   swal.fire({
     type: "success",
-    title: "Copy Content Below",
-    text: copied_value,
+    title: "Steps to Share",
+    text: '1. After Image downloads automatically, please copy link and write up \n 2. Paste The copied item to your social platform along side the downloaded image.',
     showConfirmButton: false,
-    timer: 9000
-  });
+    timer: 8000
+  }).then(() => {
+    // window.location.href = 'data:image/octet-stream;base64,' + img;
+    a.href = `${img}`;
+    a.download = "AidAmigo_Image.png";
+    a.click()
+    // alert("Image downloded")
+    swal.fire({
+    type: "success",
+    title: `${copied_value.bold()}`,
+    text: `Image Downloaded, Now Copy Link Above`,
+    showConfirmButton: false,
+    timer: 10700
+  })
+  })
 }
 </script>
                                       </div>
